@@ -1,7 +1,7 @@
 @import '../../styles/contants.scss';
 
 .wrapper{
-    background-color: white;
+    background: white;
 
     .container{
         align-items: flex-start;
@@ -53,6 +53,7 @@
         .rightside{
             @media (max-width: $sm){
                 text-align: center;
+                gap: 1rem;
             }
             display: flex;
             flex-direction: column;

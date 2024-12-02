@@ -9,35 +9,36 @@ import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 const Header = () => {
     const [menuOpened, setMenuOpened] = useState(false);
     const headerShadow = useHeaderShadow();
-    const menuRef = useRef();
+    const menuRef = useRef(null);
+
     useOutsideAlerter(
         {
             menuRef,
-            setMenuOpened
+            setMenuOpened,
         }
     );
     return (
         <motion.div 
+        variants={headerVariants}
         initial="hidden"
         whileInView="show"
-        variants={headerVariants}
-        viewport={{once: false, amount: 0.25}}
-        className={`paddings ${css.wrapper}`}
+        
+        viewport={{once: true, amount: 0.25}}
         style = {{boxShadow: headerShadow}}
+        className={`bg-primary paddings ${css.wrapper}`}
+        
         >
 
-            <div className={`flexCenter innerWidth ${css.container}`}>
+            <div className={`innerWidth ${css.container} flexCenter`}>
                 <div className={css.name}>
                     Yuxin Ren
                 </div>
 
                 <ul 
-
                 ref={menuRef}
-
+                style={getMenuStyles(menuOpened)}
                 className={`flexCenter ${css.menu}`}
-                style={getMenuStyles(menuOpened)
-                }>
+                >
                     <li><a href="#expertises">Professional Skills</a></li>
                     <li><a href="#work">Experience</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -45,8 +46,7 @@ const Header = () => {
                     <li className={`flexCenter ${css.contact}`}>
                         <p><BiPhoneCall size={"30px"}/> +61 0459216814</p>
                         <p><BiPhone size={"30px"}/> +86 18192812085</p>
-                        <a href="mailto:micheren1@outlook.com"> <BiEnvelope size={"30px"}/> micheren1@outlook.com </a>
-                        {/* <p><BiEnvelope size={"30px"}/> micheren1@outlook.com</p> */}
+                        <p><BiEnvelope size={"30px"}/> <a href="mailto:micheren1@outlook.com"> micheren1@outlook.com </a></p>
                     </li>
                 </ul>
                 {/* Only for small or medium screens */}
@@ -57,7 +57,7 @@ const Header = () => {
                 </div>
             </div>
         </motion.div>
-    )
-}
+    );
+};
 
 export default Header;

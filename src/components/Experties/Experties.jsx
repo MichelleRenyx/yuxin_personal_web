@@ -13,7 +13,9 @@ const Experties = () => {
         viewport={{once: false, amount: 0.25}}
     
         className={`paddings ${css.wrapper}`}>
+
             <a className="anchor" id="expertises"></a>
+            
             <div className={`paddings yPaddings flexCenter innerWidth ${css.container}`}>
                 <div className={css.leftside}>
                     {
