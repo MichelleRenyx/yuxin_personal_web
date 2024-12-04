@@ -3,28 +3,31 @@ import { CiMobile1 } from "react-icons/ci";
 import { MdWorkspacesOutline } from "react-icons/md";
 export const projectExperience = [
   {
-    name: "Website Design",
-    projects: 76,
+    name: "Proficiant in",
+    originText: "Object-Oriented Software Design...",
+    detailedText: "Object-Oriented Programming (Java), computer networks core protocols (IP, UDP/TCP, HTTP), design patterns (Singleton, Factory, Strategy, etc.), Git, Maven, JMeter, Scrum (Agile-Scrum), Docker",
     icon: HiOutlineDesktopComputer,
     bg: "#286F6C",
   },
   {
-    name: "Mobile App Design",
-    projects: 63,
+    name: " Intermediate",
+    originText: "Spring Boot, ReactJS, MySQL...",
+    detailedText: "database systems (MySQL, PostgreSQL), lock mechanisms (synchronized), thread pools, distributed system, React, ReactJS, Node.js, JavaScript, JSP, JFormDesigner",
     icon: CiMobile1,
     bg: "#EEC048",
   },
   {
-    name: "Brand Identity",
-    projects: 47,
+    name: "Familiar with",
+    originText: "Micro-services, Redis, Nacos...",
+    detailedText: "Spring Cloud, Spring Security, Micro-services architecture, concurrent containers (HashMap, CopyOnWriteArrayList), Redis, Nacos",
     icon: MdWorkspacesOutline,
     bg: "#F26440",
   },
 ];
 
 export const WhatDoIHelp = [
-  "I will help you with finging a solution and solve your problem, We use process design to create digital products. Besides that also help their business.",
-  "We use process design to create digital products. Besides that also help their business",
+  "I am a software engineering student with a solid foundation in object-oriented programming, web application development, and database systems. I have hands-on experience with technologies like Spring Boot, ReactJS, and MySQL, and I am familiar with distributed systems and microservices architecture using tools like Redis, Nacos, and Spring Cloud, which I explored during my studies to build scalable and modular applications.",
+  "While I may be early in my career, I am a fast learner who thrives in collaborative environments. My exposure to Agile practices, Git, and tools like Maven and Docker has prepared me to contribute effectively to a professional development team. I approach challenges with resilience and a focus on delivering practical solutions, and I am eager to apply my skills and continue learning to grow as a software engineer."
 ];
 
 export const workExp = [

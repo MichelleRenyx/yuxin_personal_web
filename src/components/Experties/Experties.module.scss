@@ -14,7 +14,7 @@
         .leftside{
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 3.5rem;
 
             .exp{
                 display: flex;
@@ -57,15 +57,28 @@
             }
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 0.5rem;
 
             .stats{
                 justify-content: flex-start;
                 gap: 4rem;
 
-                .stat{
-                    flex-direction: column;
-                    justify-content: flex-start;
+                .techStack {
+                    display: flex; /* 横向排列 */
+                    gap: 0.8rem; /* 设置图标之间的间距 */
+                    justify-content: center; /* 图标水平居中 */
+                    flex-wrap: wrap; /* 如果屏幕空间不足，换行排列 */
+                  }
+                  
+                  .techIcon {
+                    width: 40px; /* 固定宽度 */
+                    height: 40px; /* 固定高度 */
+                    object-fit: contain; /* 保证图片比例不变 */
+                    transition: transform 0.2s ease; /* 添加轻微的缩放动画 */
+                  
+                    &:hover {
+                      transform: scale(1.1); /* 悬停时放大 */
+                    }
                 }
             }
         }
