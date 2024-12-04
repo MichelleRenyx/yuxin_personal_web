@@ -23,7 +23,7 @@ const Hero = () => {
                     <motion.span 
                     variants={fadeIn("left", "tween", 0.3, 1)} 
                     className="secondaryText">
-                        一句话简介
+                        It's great to see you here.
                     </motion.span>
                 </div>
 
@@ -35,26 +35,37 @@ const Hero = () => {
                     src="./person111.png" alt="" style={{ width: '612px', height: '410px' }} />
                 </motion.div>
                 
-                <a className={css.linkedIn} href="https://www.linkedin.com/in/yuxin-michelle-ren">
-                    LinkedIn Page
-                </a>
+                
 
                 <div className={css.lowerElements}>
                     <motion.div 
                     variants={fadeIn("right", "tween", 0.3, 1)}
                     className={css.experience}>
-                        <div className="primaryText">0</div>
-                        <div className="secondaryText">
+                        {/* <div className="primaryText">0</div> */}
+                        {/* <div className="secondaryText">
                             <div>Years</div>
                             <div>Experience</div>
+                        </div> */}
+                        <div className="secondaryText">
+                            <div>Get to know me more by: </div>
+                            <a className={css.linkedIn} href="https://www.linkedin.com/in/yuxin-michelle-ren">
+                                LinkedIn Page
+                            </a>
+                            <a className={css.cv} href="/CV.pdf" // 指向 public 文件夹中的 CV
+                                download="Yuxin_CV.pdf" // 下载时文件名
+                            >
+                                Download My CV
+                            </a>
                         </div>
                     </motion.div>
                     <motion.div 
                     variants={fadeIn("left", "tween", 0.3, 1)}
                     className={css.certificate}>
-                        <img src="./certificate.png" alt="" />
-                        <span>Graduate Student in Software Engineering</span>
-                        <span>The University of Melbourne</span>
+                        <img src="./certificate1.png" alt="" />
+                        <span>The University of Melbourne<br /><br /></span>
+                        <span>Graduate Student in </span>
+                        <span> Software Engineering</span>
+                        
                     </motion.div>
                 </div>
             </motion.div>
