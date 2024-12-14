@@ -31,7 +31,7 @@ const Portfolio = () => {
                     />
                     <motion.img 
                     variants={fadeIn("up", "tween", 0.7, 0.6)}
-                    src="./showCase2.png" 
+                    src="./shared-whiteBoard.png" 
                     alt="project"
                     />
                     <motion.img 
