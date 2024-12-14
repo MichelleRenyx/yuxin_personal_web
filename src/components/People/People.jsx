@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import css from "./People.module.scss";
 import {motion} from "framer-motion";
 import {footerVariants, staggerChildren} from "../../utils/motion";
@@ -30,10 +30,14 @@ const People = () => {
                 <Slider {...sliderSettings} className={css.slider}>
                     {
                         comments.map((comment, i) => {
+                            const [showFull, setShowFull] = useState(false);
                             return (
-                                <div className={`flexCenter ${css.comment}`} >
+                                <div className={`flexCenter ${css.comment}`} 
+                                onMouseEnter={() => setShowFull(true)} 
+                                onMouseLeave={() => setShowFull(false)}
+                                >
                                     <img src={comment.img} alt="" />
-                                    <p>{comment.comment}</p>
+                                    <p>{showFull ? comment.comment : `${comment.comment.slice(0, 160)}${comment.comment.length > 160 ? '...' : ''}`}</p>
 
                                     <div className={css.line}></div>
 

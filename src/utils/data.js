@@ -56,18 +56,18 @@ export const workExp = [
 
 export const comments = [
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
+    name: "Wanyu Li",
+    post: "someone working at Meta",
     comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
+      "Yuxin is the most remarkable people I have ever met. We became friends during our undergraduate years, and knowing her remains one of the greatest privileges of my life. Throughout university, we had the chance to work together on numerous projects, competitions, and activities. Her creativity shines through in everything she does, and she has a natural ability to guide and inspire others while remaining humble, loyal, and an excellent team player. Above all, her presence brings joy to everyone around her. I am confident she will continue to make a meaningful impact wherever she goes.",
+    img: "./wanyu.png",
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
+    name: "Qianchen Hu",
+    post: "Quantitative Analyst at Arevon",
     comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people1.png",
+      "Yuxin has always been an incredible source of inspiration and support in my life. She is not only kind-hearted and always willing to lend a hand, but also one of the most thoughtful and genuine people I know. Her dedication to her studies and her ambitious, goal-oriented nature make her stand out as a person of great determination and vision.What inspires me most about Yuxin is her passion for life and her ability to bring joy to everyone around her. Her positive energy is truly contagious, and she has a unique way of lifting others up with her humor and warmth. I am grateful to have her as a friend, and I deeply admire her for the motivation and perspective she brings to my life.",
+    img: "./qianchen.png",
   },
   {
     name: "Anamika Sandula",
