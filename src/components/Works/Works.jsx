@@ -17,7 +17,7 @@ const Works = () => {
             <a className="anchor" id="work"></a>
 
             <div className={`flexCenter innerWidth ${css.container}`}>
-                <span className="primaryText">My Work Experience</span>
+                <span className="primaryText">Extracurricular Activities</span>
                 <div className={`flexCenter ${css.experience}`}>
                     {
                         workExp.map((exp, i) => {
@@ -32,6 +32,7 @@ const Works = () => {
                                 <div className={css.role}>
                                     <h1>{exp.role}</h1>
                                     <p>{exp.detail}</p>
+                                    <p>{exp.awards}</p>
                                 </div>
                             </motion.div>
                             ) 

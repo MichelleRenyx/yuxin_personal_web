@@ -31,33 +31,27 @@ export const WhatDoIHelp = [
 ];
 
 export const workExp = [
-  // {
-  //   place: "Self-Employed, Brisbane",
-  //   tenure: "Aug 2014 - Sep 2016",
-  //   role: "Visual Designer",
-  //   detail:
-  //     "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
-  // },
-  // {
-  //   place: "New Man Services",
-  //   tenure: "Aug 2014 - Sep 2016",
-  //   role: "UI/UX Designer",
-  //   detail:
-  //     "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
-  // },
   {
     place: "IEEE WIE AG University of Melbourne Student Branch",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "Sr. Product Designer",
-    detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+    tenure: "July 2024 - now",
+    role: "Vice Chair",
+    detail: "Collaborated with Engineers Australia to co-organize the \"Unlock Your Engineering Future: Migration Skill Assessment & Getting Chartered Workshop\"; \n Invited leaders from Canva, Telstra, CSL, and NAB to share insights during the \“Building Resilient Careers: Navigating the Tech Industry\” panel. \n Worked with other engineering student societies to host board-game nights and other social events",
+    awards: "➢ Awards: \"Outstanding Event/Initiative Award 2024\" (individual)\n" +
+        "  and \"Outstanding Student Branch WIE AG Award 2024\" (branch) by IEEE Victoria.",
+  },
+  {
+    place: "Michelin-Enactus: The Youth Coalition for Road Safety",
+    tenure: "Oct 2019 - Jan 2010",
+    role: "Project Manager",
+    detail: "Led a team in the Michelin-Enactus Road Safety Youth Creativity Competition, facilitating brainstorming sessions, conducting team-building activities to leverage individual strengths, and developing a flexible project plan.\n Worked closely with team members to execute creative promotional efforts, such as recording a campaign song, designing flyers, creating roadshow materials, editing videos, and hosting road safety workshops, effectively raising awareness and engaging the community.",
+    awards: "➢ Awards: Top 3 in Northwest Region; Top 20 Nationally (China Division).",
   },
 ];
 
 export const comments = [
   {
     name: "Wanyu Li",
-    post: "someone working at Meta",
+    post: "a friend working at Meta",
     comment:
       "Yuxin is the most remarkable people I have ever met. We became friends during our undergraduate years, and knowing her remains one of the greatest privileges of my life. Throughout university, we had the chance to work together on numerous projects, competitions, and activities. Her creativity shines through in everything she does, and she has a natural ability to guide and inspire others while remaining humble, loyal, and an excellent team player. Above all, her presence brings joy to everyone around her. I am confident she will continue to make a meaningful impact wherever she goes.",
     img: "./wanyu.png",

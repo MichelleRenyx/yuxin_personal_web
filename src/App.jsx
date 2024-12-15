@@ -11,8 +11,8 @@ const App = () => {
     <Header/>
     <Hero/>
     <Experties/>
-    <Works/>
     <Portfolio/>
+    <Works/>
     <People/>
     <Footer/>
   </div>
