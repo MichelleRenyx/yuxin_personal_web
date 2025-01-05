@@ -21,19 +21,29 @@
         .showcase{
             width: 100%;
             gap: 1.5rem;
-            justify-content: space-around;
+            justify-content: flex-start;
             flex-wrap: wrap;
+            overflow: visible;
 
             >img{
                 @media(max-width: $sm){
                     width: 100%;
                 }
                 border-radius: 20px;
-                max-width: 25rem;
-                max-height: 18rem;
+                max-width: 38rem;
+                max-height: 25rem;
                 box-shadow: 0px 21px 13px rgba(0,0,0,13%);
                 cursor: pointer;
+                transition: all 0.3s ease-in-out; // 平滑变化效果
+
+                &:hover {
+                    transform: scale(1.1);
+                    max-width: none;
+                    width: 40rem; // 放大到27.5rem宽
+                    height: auto; // 保持宽高比
+                }
             }
         }
     }
 }
+
