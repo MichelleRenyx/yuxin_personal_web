@@ -37,10 +37,10 @@
                 transition: all 0.3s ease-in-out; // 平滑变化效果
 
                 &:hover {
-                    transform: scale(1.1);
+                    // transform: scale(1.1);
                     max-width: none;
-                    width: 40rem; // 放大到27.5rem宽
-                    height: auto; // 保持宽高比
+                    width: 40rem;
+                    height: auto;
                 }
             }
         }

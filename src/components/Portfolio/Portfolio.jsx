@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import css from "./Portfolio.module.scss";
 import { fadeIn, staggerChildren } from "../../utils/motion";
 import { motion } from "framer-motion";
 
 const Portfolio = () => {
+    const [showAll, setShowAll] = useState(false);
+
+    // 点击处理函数，切换显示状态
+    const handleToggleShowAll = () => {
+        setShowAll(!showAll);
+    };
     return (
         <motion.section 
         variants={staggerChildren}
@@ -20,7 +26,7 @@ const Portfolio = () => {
                         <span className="primaryText">My Projects</span>
                         <p style={{marginTop: "10px"}}>The code-driven adventures in my professional odyssey.</p>
                     </div>
-                    <span className="secondaryText">Explore More</span>
+                    <span className="secondaryText"  onClick={handleToggleShowAll}>Explore More</span>
                 </div>
 
                 <div className={`flexCenter ${css.showcase}`}>
@@ -34,11 +40,13 @@ const Portfolio = () => {
                     src="./club-event_management.png" 
                     alt="project"
                     />
-                    <motion.img 
-                    variants={fadeIn("up", "tween", 0.9, 0.6)}
-                    src="./shared-whiteBoard.png" 
-                    alt="project"
-                    />
+                    {showAll && (
+                        <motion.img 
+                            // variants={fadeIn("up", "tween", 0.9, 0.6)}
+                            src="./shared-whiteBoard.png" 
+                            alt="project"
+                        />
+                    )}
                 </div>
             </div>
         </motion.section>
