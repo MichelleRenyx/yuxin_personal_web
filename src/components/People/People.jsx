@@ -20,9 +20,9 @@ const People = () => {
         variants={footerVariants}
         className={`yPaddings innerWidth ${css.container}`}>
             <div className={`flexCenter ${css.heading}`}>
-                <span className="primaryText">People talk about me</span>
-                <p style={{marginTop: "2rem"}}>小标题第一行</p>
-                <p>小标题第二行</p>
+                <span className="primaryText">My Supporters Say</span>
+                <p style={{marginTop: "2rem"}}>Insights and endorsements from colleagues, friends, and mentors.</p>
+                {/* <p>小标题第二行</p> */}
             </div>
 
             {/* carousal */}

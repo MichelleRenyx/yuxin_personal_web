@@ -11,20 +11,28 @@
         .comments{
             .slider :global{
                 .slick-list{
-                    margin: 0 -7px;
+                    margin: 0 0px;
                     box-sizing: initial;
-                    padding: 80px 0px;
+                    padding: 70px 20px;
                     overflow-y: visible;
                     
                     & .slick-slide>div{
-                        padding: 0 20px;
+                        padding: 0 30px;
                     }
                     & .slick-slide.slick-active.slick-current + .slick-slide{
                         @media (min-width: $lg){
                             transition: all 1000ms ease-out;
-                            scale: 1.1;
+                            scale: 1;
                             transform: translateY(-30px);
                         }
+                    }
+                }
+                 // 添加自定义箭头样式
+                 .slick-prev, .slick-next {
+                    color: rgb(236, 166, 80); // 更改箭头颜色
+                    &:before {
+                        color: rgb(236, 166, 80); // 确保伪元素也使用新颜色
+                        font-size: 40px; // 可以调整箭头大小
                     }
                 }
             }
