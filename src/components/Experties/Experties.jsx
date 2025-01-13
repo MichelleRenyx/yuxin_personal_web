@@ -63,15 +63,28 @@ const Experties = () => {
                         </div> */}
                         <div className={`flexCenter ${css.techStack}`}>
                             <img src="./java.png" alt="java-icon" className={css.techIcon} />
+                            <img src="./js.png" alt="js-icon" className={css.techIcon} />
+                            <img src="./sql.png" alt="sql-icon" className={css.techIcon} />
                             <img src="./python.png" alt="python-icon" className={css.techIcon} />
                             <img src="./react.png" alt="react-icon" className={css.techIcon} />
                             <img src="./mysql.png" alt="mysql-icon" className={css.techIcon} />
                             <img src="./postgresql.png" alt="postgresql-icon" className={css.techIcon} />
+                            <img src="./mongoDB.png" alt="mongoDB-icon" className={css.techIcon} />
+                            <img src="./redis.png" alt="redis-icon" className={css.techIcon} />
                             <img src="./git.png" alt="git-icon" className={css.techIcon} />
                             <img src="./github.png" alt="github-icon" className={css.techIcon} />
                             <img src="./springboot.png" alt="springboot-icon" className={css.techIcon} />
                             <img src="./maven.png" alt="maven-icon" className={css.techIcon} />
                             <img src="./docker.png" alt="docker-icon" className={css.techIcon} />
+                            <img src="./nginx.png" alt="nginx-icon" className={css.techIcon} />
+                            <img src="./aws.png" alt="aws-icon" className={css.techIcon} />
+                            <img src="./html.png" alt="html-icon" className={css.techIcon} />
+                            <img src="./css.png" alt="css-icon" className={css.techIcon} />
+                            <img src="./nacos.png" alt="nacos-icon" className={css.techIcon} />
+                            <img src="./vite.png" alt="vite-icon" className={css.techIcon} />
+                            <img src="./microsoft-power.png" alt="microsoft-power-icon" className={css.techIcon} />
+                            <img src="./swagger.png" alt="swagger-icon" className={css.techIcon} />
+                            
                         </div>
                     
                     </div> 

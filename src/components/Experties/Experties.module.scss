@@ -14,15 +14,15 @@
         .leftside{
             display: flex;
             flex-direction: column;
-            gap: 3.5rem;
+            gap: 1.1rem;
 
             .exp{
                 display: flex;
                 align-items: center;
                 border: 1px solid $secondary-white;
                 border-radius: 20px;
-                padding: 1.5rem;
-                gap: 2rem;
+                padding: 0.7rem;
+                gap: 1rem;
                 transition: all 200ms ease-out;
 
                 &:hover{
@@ -43,7 +43,7 @@
                     gap: 1rem;
 
                     >:nth-child(1){
-                        font-size: 1.6rem;
+                        font-size: 1.5rem;
                         font-weight: bold;
                     }
                 }
@@ -53,15 +53,15 @@
         .rightside{
             @media (max-width: $sm){
                 text-align: center;
-                gap: 1rem;
+                gap: 2rem;
             }
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 2rem;
 
             .stats{
                 justify-content: flex-start;
-                gap: 4rem;
+                gap: 5rem;
 
                 .techStack {
                     display: flex; /* 横向排列 */

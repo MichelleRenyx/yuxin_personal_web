@@ -1,26 +1,42 @@
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { CiMobile1 } from "react-icons/ci";
 import { MdWorkspacesOutline } from "react-icons/md";
+import { MdOutbox } from "react-icons/md";
+import { CiDatabase } from "react-icons/ci";
 export const projectExperience = [
   {
-    name: "Proficiant in",
-    originText: "Object-Oriented Software Design...",
-    detailedText: "Object-Oriented Programming (Java), computer networks core protocols (IP, UDP/TCP, HTTP), design patterns (Singleton, Factory, Strategy, etc.), Git, Maven, JMeter, Scrum (Agile-Scrum), Docker",
-    icon: HiOutlineDesktopComputer,
+    name: "Languages",
+    originText: "Java, JavaScript, TypeScript, SQL, Python",
+    detailedText: "Java, JavaScript, TypeScript, SQL, Python",
+    icon: MdWorkspacesOutline,
     bg: "#286F6C",
   },
   {
-    name: " Intermediate",
-    originText: "Spring Boot, ReactJS, MySQL...",
-    detailedText: "database systems (MySQL, PostgreSQL), lock mechanisms (synchronized), thread pools, distributed system, React, ReactJS, Node.js, JavaScript, JSP, JFormDesigner",
-    icon: CiMobile1,
+    name: "Web Tech",
+    originText: "Spring Boot, SpringMVC, JSP, Restful API...",
+    detailedText: "Spring Boot, SpringMVC, JSP, Restful API, Spring Cloud, Spring Security",
+    icon: HiOutlineDesktopComputer,
+    bg: "#2986cc",
+  },
+  {
+    name: "Front-end",
+    originText: "HTML5, CSS3, React, JFormDesigner",
+    detailedText: "HTML5, CSS3, React, JFormDesigner",
+    icon: MdOutbox,
     bg: "#EEC048",
   },
   {
-    name: "Familiar with",
-    originText: "Micro-services, Redis, Nacos...",
-    detailedText: "Spring Cloud, Spring Security, Micro-services architecture, concurrent containers (HashMap, CopyOnWriteArrayList), Redis, Nacos",
-    icon: MdWorkspacesOutline,
+    name: "Database Tech",
+    originText: "MySQL, PostgreSQL, Redis, MangoDB, MyBatis",
+    detailedText: "MySQL, PostgreSQL, Redis, MongoDB, MyBatis",
+    icon: CiDatabase,
+    bg: "#c27ba0",
+  },
+  {
+    name: "Tools",
+    originText: "AWS, Git, Maven, Nginx, Docker, Microsoft Power...",
+    detailedText: "AWS, Git, Maven, Nginx, Docker, Microsoft Power, Vite, JMeter, Swagger, Springfox, Nacos",
+    icon: CiMobile1,
     bg: "#F26440",
   },
 ];
@@ -35,13 +51,13 @@ export const workExp = [
     place: "IEEE WIE AG University of Melbourne Student Branch",
     tenure: "July 2024 - now",
     role: "Vice Chair",
-    detail: "Collaborated with Engineers Australia to co-organize the \"Unlock Your Engineering Future: Migration Skill Assessment & Getting Chartered Workshop\"; \n Invited leaders from Canva, Telstra, CSL, and NAB to share insights during the \“Building Resilient Careers: Navigating the Tech Industry\” panel. \n Worked with other engineering student societies to host board-game nights and other social events",
+    detail: "Worked with the team to co-organize the \"Unlock Your Engineering Future: Migration Skill Assessment & Getting Chartered Workshop\" in collaboration with Engineers Australia; \n Assisted the Chair in planning the panel discussion \“Building Resilient Careers: Navigating the Tech Industry\”, securing participation of the panelists from industry leaders at Canva, Telstra, CSL, and NAB; \n Collaborated with various engineering student societies to organize board game nights and other social events, contributing to community building and student engagement.",
     awards: "➢ Awards: \"Outstanding Event/Initiative Award 2024\" (individual)\n" +
         "  and \"Outstanding Student Branch WIE AG Award 2024\" (branch) by IEEE Victoria.",
   },
   {
     place: "Michelin-Enactus: The Youth Coalition for Road Safety",
-    tenure: "Oct 2019 - Jan 2010",
+    tenure: "Oct 2019 - Jan 2020",
     role: "Project Manager",
     detail: "Led a team in the Michelin-Enactus Road Safety Youth Creativity Competition, facilitating brainstorming sessions, conducting team-building activities to leverage individual strengths, and developing a flexible project plan.\n Worked closely with team members to execute creative promotional efforts, such as recording a campaign song, designing flyers, creating roadshow materials, editing videos, and hosting road safety workshops, effectively raising awareness and engaging the community.",
     awards: "➢ Awards: Top 3 in Northwest Region; Top 20 Nationally (China Division).",
@@ -57,11 +73,32 @@ export const comments = [
     img: "./wanyu.png",
   },
   {
+    name: "Yuhan Chen",
+    post: "Classmate and friend in XJTU \n Marketing Data Analyst",
+    comment:
+      "Yuxin is a great teammate, natural leader, and passionate worker who brings excellence to everything she takes on. As her college classmate and project partner throughout our undergraduate years, I've seen her excellent thinking and communication skills in action while working together on numerous group projects, where she consistently showed amazing focus and dedication. Not only does she excel at leading teams, but she also maintains strong collaboration with everyone she works with. Her enthusiasm for learning and growth has always been truly inspiring, as she consistently shows genuine excitement for developing her career and building her technical skills. This passion, combined with her drive to excel and strong team spirit, has always been evident in her work. Having worked closely with her on many projects, I know firsthand that she brings both strong skills and positive energy to every task she undertakes. With her determination and passion for continuous growth, I have no doubt she will achieve great success in her future career.",
+    img: "./yuhan.png",
+  },
+  {
     name: "Qianchen Hu",
     post: "Quantitative Analyst at Arevon",
     comment:
       "Yuxin has always been an incredible source of inspiration and support in my life. She is not only kind-hearted and always willing to lend a hand, but also one of the most thoughtful and genuine people I know. Her dedication to her studies and her ambitious, goal-oriented nature make her stand out as a person of great determination and vision.What inspires me most about Yuxin is her passion for life and her ability to bring joy to everyone around her. Her positive energy is truly contagious, and she has a unique way of lifting others up with her humor and warmth. I am grateful to have her as a friend, and I deeply admire her for the motivation and perspective she brings to my life.",
     img: "./qianchen.png",
+  },
+  {
+    name: "Xinyu Zhang",
+    post: "UCAS PhD in Economics",
+    comment:
+      "Yuxin is a remarkable individual with a unique ability to balance analytical thinking and creativity, making her an invaluable teammate and project partner.  As her college classmate, I have worked with her on several challenging projects, and I’ve always been impressed by her ability to approach problems with fresh perspectives and practical solutions.  Her innovative mindset and strong sense of responsibility consistently elevate the quality of work in any group she joins. Beyond her technical and interpersonal strengths, Yuxin also has an innate ability to motivate and inspire those around her.  Her positive energy and encouragement create a sense of unity within teams, ensuring that everyone is working toward a shared goal.  I am confident that Yuxin’s unique combination of creativity, curiosity, and leadership will lead her to excel in any path she chooses.",
+    img: "./xinyu.png",
+  },
+  {
+    name: "Chunyi Feng",
+    post: "A friend in ZJU",
+    comment:
+      "Yuxin is one of my best friends during my undergraduate years. She is an extremely considerate person, always there for her friends. At the same time, she is also a person of great perseverance and courage, always forging ahead towards her set goals with unwavering determination. Switching from a business major to a computer science major is a huge challenge, but I think Yuxin has handled it perfectly! She has proficiently mastered a variety of professional skills in the field of software engineering and has completed many impressive projects. Moreover, I am deeply moved by her great passion for software engineering. I believe that she will definitely achieve something remarkable in the field of computer science in the future!",
+    img: "./chunyi.png",
   },
   {
     name: "Somebody",
@@ -76,13 +113,6 @@ export const comments = [
     comment:
       "Words for me.",
     img: "./people1.png",
-  },
-  {
-    name: "Somebody",
-    post: "Creative Manager",
-    comment:
-      "Words for me.",
-    img: "./people2.png",
   },
 ];
 
