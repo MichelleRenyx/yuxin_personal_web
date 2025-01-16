@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 const Portfolio = () => {
     const [showAll, setShowAll] = useState(false);
 
-    // 点击处理函数，切换显示状态
     const handleToggleShowAll = () => {
         setShowAll(!showAll);
     };

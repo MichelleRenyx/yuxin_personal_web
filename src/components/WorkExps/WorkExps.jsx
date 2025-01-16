@@ -1,10 +1,10 @@
 import React from "react";
-import css from "./Works.module.scss";
+import css from "./WorkExps.module.scss";
 import { motion } from "framer-motion";
 import {fadeIn, staggerChildren, textVariant2, zoomIn} from "../../utils/motion";
-import { works } from "../../utils/data";
+import { workExp } from "../../utils/data";
 
-const Works = () => {
+const WorkExps = () => {
     return(
         <motion.section 
         variants={staggerChildren}
@@ -17,10 +17,10 @@ const Works = () => {
             <a className="anchor" id="work"></a>
 
             <div className={`flexCenter innerWidth ${css.container}`}>
-                <span className="primaryText">Extracurricular Activities</span>
+                <span className="primaryText">Work Experience</span>
                 <div className={`flexCenter ${css.experience}`}>
                     {
-                        works.map((exp, i) => {
+                        workExp.map((exp, i) => {
                             return (
                                 <motion.div className={`flexCenter ${css.exp}`} 
                                 variants={textVariant2}
@@ -32,7 +32,14 @@ const Works = () => {
                                 <div className={css.role}>
                                     <h1>{exp.role}</h1>
                                     <p>{exp.detail}</p>
-                                    <p>{exp.awards}</p>
+                                    <div className={css.techStack}>
+                                        <p>{exp.techStack}</p>
+                                    </div>
+                                    <div className={css.awardsText}>
+                                        {exp.awards.split('\n').map((item, index) => (
+                                        <p key={index}>{item}</p>
+                                        ))}
+                                    </div>
                                 </div>
                             </motion.div>
                             ) 
@@ -52,4 +59,4 @@ const Works = () => {
     )
 }
 
-export default Works;
+export default WorkExps;

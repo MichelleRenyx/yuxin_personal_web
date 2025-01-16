@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import css from "./Experties.module.scss";
-import { projectExperience, WhatDoIHelp } from "../../utils/data";
+import { projectExperience, WhatDoIHelp, boldWords } from "../../utils/data";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, textVariant } from "../../utils/motion";
 
@@ -47,8 +47,20 @@ const Experties = () => {
                 className={css.rightside}>
                     <span className="primaryText">What I Excel At? </span>
                     {
+                        // WhatDoIHelp.map((paragraph, i) => {
+                        //     return <span className="smText" key={i}>{paragraph}</span>
+                        // })
                         WhatDoIHelp.map((paragraph, i) => {
-                            return <span className="smText" key={i}>{paragraph}</span>
+                            const regex = new RegExp(`(${boldWords.join('|')})`, 'gi');
+                            const parts = paragraph.split(regex);
+            
+                            return <span className="smText" key={i}>
+                                {parts.map((part, index) => 
+                                    boldWords.some(word => new RegExp(word, 'i').test(part))
+                                    ? <strong key={index}>{part}</strong>
+                                    : part
+                                )}
+                            </span>
                         })
                     }
 
