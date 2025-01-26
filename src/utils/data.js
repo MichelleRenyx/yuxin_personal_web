@@ -79,7 +79,7 @@ export const workExp = [
   {
     place: "BASF \n Coatings Technology (Shanghai) Co., Ltd.",
     tenure: "Jan 2025 - Present",
-    role: "Digital Product Manager (Intern)",
+    role: "Digital Product Intern",
     detail: "Responsible for testing new features, managing virtual color solutions, and supporting the production configuration of digital products. Involved in training end-users and collaborated with DevOps teams to enhance product functionality and user experience.",
     techStack: "Agile methodologies, Project Management, Microsoft Power Apps",
     awards: "Conducted testing and validation of new features to enhance digital product reliability and user experience. \n Managed virtual color solutions, including system configurations and setup of scan panels and color collections, optimizing operational workflows. \n Collaborated with the DevOps team on Microsoft Power Apps to streamline production processes and application deployment. \n Assisted the Product Owner in configuring production environments for digital products, ensuring alignment with business objectives. \n Trained end-users on utilizing various modules and features of digital products, increasing user adoption and satisfaction.",
