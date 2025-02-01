@@ -35,16 +35,28 @@ const Portfolio = () => {
                     alt="project"
                     />
                     <motion.img 
+                    variants={fadeIn("up", "tween", 0.5, 0.6)}
+                    src="./Intelligent Form File Processor.png" 
+                    alt="project"
+                    />
+                    {/* <motion.img 
                     variants={fadeIn("up", "tween", 0.7, 0.6)}
                     src="./club-event_management.png" 
                     alt="project"
-                    />
+                    /> */}
                     {showAll && (
-                        <motion.img 
-                            // variants={fadeIn("up", "tween", 0.9, 0.6)}
-                            src="./shared-whiteBoard.png" 
-                            alt="project"
-                        />
+                        <>
+                            <motion.img 
+                                // variants={fadeIn("up", "tween", 0.7, 0.6)}
+                                src="./club-event_management.png" 
+                                alt="project"
+                            />
+                            <motion.img 
+                                // variants={fadeIn("up", "tween", 0.9, 0.6)}
+                                src="./shared-whiteBoard.png" 
+                                alt="project"
+                            />
+                        </>
                     )}
                 </div>
             </div>

@@ -78,6 +78,7 @@ const Experties = () => {
                             <img src="./js.png" alt="js-icon" className={css.techIcon} />
                             <img src="./sql.png" alt="sql-icon" className={css.techIcon} />
                             <img src="./python.png" alt="python-icon" className={css.techIcon} />
+                            <img src="./django.png" alt="django-icon" className={css.techIcon} />
                             <img src="./react.png" alt="react-icon" className={css.techIcon} />
                             <img src="./mysql.png" alt="mysql-icon" className={css.techIcon} />
                             <img src="./postgresql.png" alt="postgresql-icon" className={css.techIcon} />
@@ -92,6 +93,7 @@ const Experties = () => {
                             <img src="./aws.png" alt="aws-icon" className={css.techIcon} />
                             <img src="./html.png" alt="html-icon" className={css.techIcon} />
                             <img src="./css.png" alt="css-icon" className={css.techIcon} />
+                            <img src="./tailwind.png" alt="tailwind-icon" className={css.techIcon} />
                             <img src="./nacos.png" alt="nacos-icon" className={css.techIcon} />
                             <img src="./vite.png" alt="vite-icon" className={css.techIcon} />
                             <img src="./microsoft-power.png" alt="microsoft-power-icon" className={css.techIcon} />

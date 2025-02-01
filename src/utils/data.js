@@ -27,15 +27,15 @@ export const projectExperience = [
   },
   {
     name: "Database Tech",
-    originText: "MySQL, PostgreSQL, Redis, MangoDB, MyBatis",
-    detailedText: "MySQL, PostgreSQL, Redis, MongoDB, MyBatis",
+    originText: "MySQL, PostgreSQL, Redis, MyBatis...",
+    detailedText: "MySQL, PostgreSQL, Redis, MyBatis, MongoDB",
     icon: CiDatabase,
     bg: "#c27ba0",
   },
   {
     name: "Tools",
     originText: "AWS, Git, Maven, Nginx, Docker...",
-    detailedText: "AWS, Git, Maven, Nginx, Docker, Microsoft Power, Vite, JMeter, Swagger, Springfox, Nacos",
+    detailedText: "AWS, Git, Maven, Docker, Nginx, Microsoft Power, Vite, Postman, JMeter, Swagger, Springfox, Nacos",
     icon: CiMobile1,
     bg: "#F26440",
   },
@@ -135,20 +135,6 @@ export const comments = [
     comment:
       "Yuxin is one of my best friends during my undergraduate years. She is an extremely considerate person, always there for her friends. At the same time, she is also a person of great perseverance and courage, always forging ahead towards her set goals with unwavering determination. Switching from a business major to a computer science major is a huge challenge, but I think Yuxin has handled it perfectly! She has proficiently mastered a variety of professional skills in the field of software engineering and has completed many impressive projects. Moreover, I am deeply moved by her great passion for software engineering. I believe that she will definitely achieve something remarkable in the field of computer science in the future!",
     img: "./chunyi.png",
-  },
-  {
-    name: "Somebody",
-    post: "Creative Manager",
-    comment:
-      "Words for me.",
-    img: "./people2.png",
-  },
-  {
-    name: "Somebody",
-    post: "Creative Manager",
-    comment:
-      "Words for me.",
-    img: "./people1.png",
   },
 ];
 
