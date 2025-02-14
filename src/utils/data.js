@@ -69,6 +69,14 @@ export const works = [
 
 export const workExp = [
   {
+    place: "Rhombus AI",
+    tenure: "Feb 2025 - Present",
+    role: "Software Engineer (Intern)",
+    detail: "Developing full-stack capabilities by refining UI components with React and integrating backend functionalities using Django. Enhancing skills in cloud deployment, automated testing, and AI integration to improve software reliability and innovation. Fostering problem-solving and collaborative skills in a dynamic tech environment.",
+    techStack: "Django, React, Python, TypeScript, Tailwind, Next.js, AWS, Kubernetes, EKS, Terraform",
+    awards: "Collaboratively refining and enhancing web app features utilizing React, Next.js, and Tailwind; improved 1-2 UI components weekly to enhance user interfaces and workflows.\n assisting in integrating AI functionalities into the backend using Python, Django, and Django Ninja, enhancing the system's AI-driven capabilities.\nAuthored and maintained clear, user-friendly API documentation, ensuring seamless integrations and usability.\nActively participated in code reviews and utilized Git for collaborative workflows, contributing valuable feedback on 5-10 commits weekly to ensure code quality.\nDeveloped and executed unit and integration tests to verify software reliability and functionality, maintaining high standards of software quality.\nReceived mentorship on deploying applications using Kubernetes, EKS, and Terraform on AWS, contributing to 1-2 deployments during the internship.\nEngaged in agile software development practices including sprint planning, retrospectives, and daily stand-ups, enhancing teamwork and project management skills.",
+  },
+  {
     place: "Hua's Pharmaceuticals Co., Ltd.",
     tenure: "May 2024 - Aug 2024",
     role: "Backend Developer (Intern)",
@@ -78,7 +86,7 @@ export const workExp = [
   },
   {
     place: "BASF \n Coatings Technology (Shanghai) Co., Ltd.",
-    tenure: "Jan 2025 - Present",
+    tenure: "Dec 2024 - Feb 2025",
     role: "Digital Product Intern",
     detail: "Responsible for testing new features, managing virtual color solutions, and supporting the production configuration of digital products. Involved in training end-users and collaborated with DevOps teams to enhance product functionality and user experience.",
     techStack: "Agile methodologies, Project Management, Microsoft Power Apps",
