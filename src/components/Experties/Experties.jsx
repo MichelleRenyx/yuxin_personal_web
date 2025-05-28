@@ -74,31 +74,31 @@ const Experties = () => {
                             <span className="secondaryText">第二个量化</span>
                         </div> */}
                         <div className={`flexCenter ${css.techStack}`}>
-                            <img src="./java.png" alt="java-icon" className={css.techIcon} />
-                            <img src="./js.png" alt="js-icon" className={css.techIcon} />
-                            <img src="./sql.png" alt="sql-icon" className={css.techIcon} />
-                            <img src="./python.png" alt="python-icon" className={css.techIcon} />
-                            <img src="./django.png" alt="django-icon" className={css.techIcon} />
-                            <img src="./react.png" alt="react-icon" className={css.techIcon} />
-                            <img src="./mysql.png" alt="mysql-icon" className={css.techIcon} />
-                            <img src="./postgresql.png" alt="postgresql-icon" className={css.techIcon} />
-                            <img src="./mongoDB.png" alt="mongoDB-icon" className={css.techIcon} />
-                            <img src="./redis.png" alt="redis-icon" className={css.techIcon} />
-                            <img src="./git.png" alt="git-icon" className={css.techIcon} />
-                            <img src="./github.png" alt="github-icon" className={css.techIcon} />
-                            <img src="./springboot.png" alt="springboot-icon" className={css.techIcon} />
-                            <img src="./maven.png" alt="maven-icon" className={css.techIcon} />
-                            <img src="./docker.png" alt="docker-icon" className={css.techIcon} />
-                            <img src="./nginx.png" alt="nginx-icon" className={css.techIcon} />
-                            <img src="./aws.png" alt="aws-icon" className={css.techIcon} />
-                            <img src="./html.png" alt="html-icon" className={css.techIcon} />
-                            <img src="./css.png" alt="css-icon" className={css.techIcon} />
-                            <img src="./tailwind.png" alt="tailwind-icon" className={css.techIcon} />
-                            <img src="./nacos.png" alt="nacos-icon" className={css.techIcon} />
-                            <img src="./vite.png" alt="vite-icon" className={css.techIcon} />
-                            <img src="./microsoft-power.png" alt="microsoft-power-icon" className={css.techIcon} />
-                            <img src="./swagger.png" alt="swagger-icon" className={css.techIcon} />
-                            
+                            <img src="./java.svg" alt="java-icon" className={css.techIcon} />
+                            <img src="./javascript.svg" alt="js-icon" className={css.techIcon} />
+                            <img src="./typescript.svg" alt="typescript-icon" className={css.techIcon} />
+                            <img src="./python.svg" alt="python-icon" className={css.techIcon} />
+                            <img src="./django.svg" alt="django-icon" className={css.techIcon} />
+                            <img src="./react.svg" alt="react-icon" className={css.techIcon} />
+                            <img src="./mysql.svg" alt="mysql-icon" className={css.techIcon} />
+                            <img src="./postgresql.svg" alt="postgresql-icon" className={css.techIcon} />
+                            <img src="./mongodb.svg" alt="mongoDB-icon" className={css.techIcon} />
+                            <img src="./redis.svg" alt="redis-icon" className={css.techIcon} />
+                            <img src="./git.svg" alt="git-icon" className={css.techIcon} />
+                            <img src="./github.svg" alt="github-icon" className={css.techIcon} />
+                            <img src="./springboot.svg" alt="springboot-icon" className={css.techIcon} />
+                            <img src="./maven.svg" alt="maven-icon" className={css.techIcon} />
+                            <img src="./docker.svg" alt="docker-icon" className={css.techIcon} />
+                            <img src="./nginx.svg" alt="nginx-icon" className={css.techIcon} />
+                            <img src="./aws.svg" alt="aws-icon" className={css.techIcon} />
+                            <img src="./html.svg" alt="html-icon" className={css.techIcon} />
+                            <img src="./css.svg" alt="css-icon" className={css.techIcon} />
+                            <img src="./tailwind.svg" alt="tailwind-icon" className={css.techIcon} />
+                            <img src="./vite.svg" alt="vite-icon" className={css.techIcon} />
+                            <img src="./auth0.svg" alt="auth0-icon" className={css.techIcon} />
+                            <img src="./stripe.svg" alt="stripe-icon" className={css.techIcon} />
+                            <img src="./swagger.svg" alt="swagger-icon" className={css.techIcon} />
+
                         </div>
                     
                     </div> 

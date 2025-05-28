@@ -32,7 +32,7 @@ const Hero = () => {
                 className={css.person}>
                     <motion.img 
                     variants={slideIn("up", "tween", 0.5, 1.3)}
-                    src="./person111.png" alt="" style={{ width: '612px', height: '410px' }} />
+                    src="./yuxin.png" alt="" style={{ width: '612px', height: '410px' }} />
                 </motion.div>
                 
                 
@@ -61,7 +61,7 @@ const Hero = () => {
                     <motion.div 
                     variants={fadeIn("left", "tween", 0.3, 1)}
                     className={css.certificate}>
-                        <img src="./certificate1.png" alt="" />
+                        <img src="./certificate1.svg" alt="" />
                         <span>The University of Melbourne<br /><br /></span>
                         <span>Graduate Student in </span>
                         <span> Software Engineering</span>
