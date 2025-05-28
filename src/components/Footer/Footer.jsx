@@ -20,10 +20,10 @@ const Footer = () => {
                     </span>
                     <span className="secondaryText">"If you are interested in my profile and would like to discuss potential opportunities, please feel free to <a href="mailto: micheren1@outlook.com">leave me a message</a>. I am eager to connect and explore how I can contribute to your team.".</span>
                 </div>    
-                <div className={css.right}>
+                {/* <div className={css.right}>
                     <div className={css.info}>
                         <span className="secondaryText">Contact Address</span>
-                        <p>119 A'Beckett Street, Melbourne, VIC</p>
+                        <p>Melbourne, VIC</p>
                     </div>
 
                     <div className={css.menu}>
@@ -32,7 +32,7 @@ const Footer = () => {
                         <li>Notes</li>
                         <li>Experience</li>
                     </div>
-                </div>
+                </div> */}
             </motion.div>
         </motion.section>
     );
