@@ -37,7 +37,13 @@ const People = () => {
                                 onMouseLeave={() => setShowFull(false)}
                                 >
                                     <img src={comment.img} alt="" />
-                                    <p>{showFull ? comment.comment : `${comment.comment.slice(0, 160)}${comment.comment.length > 160 ? '...' : ''}`}</p>
+                                    {showFull ? (
+                                        comment.comment.split('\n').map((para, index) => (
+                                            <p key={index} className={css.paragraph}>{para.trim()}</p>
+                                        ))
+                                    ) : (
+                                        <p>{`${comment.comment.slice(0, 160)}${comment.comment.length > 160 ? '...' : ''}`}</p>
+                                    )}
 
                                     <div className={css.line}></div>
 
