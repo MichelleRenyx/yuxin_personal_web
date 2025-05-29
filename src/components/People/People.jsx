@@ -8,14 +8,14 @@ import { comments, sliderSettings } from "../../utils/data";
 const People = () => {
     return(
         <motion.section 
+        id="people"
         variants={staggerChildren}
         initial="hidden"
         whileInView="show"
         viewport={{once: false, amount: 0.25}}
-        className={`paddings ${css.wrapper}`}>
+        className={`paddings ${css.wrapper}`}
+        style={{ scrollMarginTop: '160px' }}>
 
-        <a className="anchor" id="people"></a>
-        
         <motion.div 
         variants={footerVariants}
         className={`yPaddings innerWidth ${css.container}`}>

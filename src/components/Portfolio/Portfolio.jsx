@@ -11,13 +11,13 @@ const Portfolio = () => {
     };
     return (
         <motion.section 
+        id="portfolio"
         variants={staggerChildren}
         initial="hidden"
         whileInView="show"
         viewport={{once: false, amount: 0.25}}
-        className={`paddings ${css.wrapper}`}>
-
-            <a className="anchor" id="portfolio"></a>
+        className={`paddings ${css.wrapper}`} 
+        style={{ scrollMarginTop: '160px' }}>
             
             <div className={`innerWidth flexCenter ${css.container}`}>
                 <div className={`flexCenter ${css.heading}`}>

@@ -40,7 +40,7 @@ const Header = () => {
                 className={`flexCenter ${css.menu}`}
                 >
                     <li><a href="#expertises">Professional Skills</a></li>
-                    <li><a href="#work">Experience</a></li>
+                    <li><a href="#workexps">Experience</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#people">Testimonials</a></li>
                     <li className={`flexCenter ${css.contact}`}>

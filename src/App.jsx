@@ -8,8 +8,8 @@ import People from "./components/People/People";
 import Footer from "./components/Footer/Footer";
 import css from './styles/app.module.scss';
 const App = () => {
-  return <div className={`bg-primary ${css.container}`} style={{paddingTop: 0, marginTop: 0}}>
-    <Header style={{marginTop: 0, paddingTop: 0}}/>
+  return <div className={`bg-primary ${css.container}`}>
+    <Header/>
     <Hero/>
     <Experties/>
     <WorkExps/>

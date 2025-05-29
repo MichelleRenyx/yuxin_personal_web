@@ -7,14 +7,16 @@ import { workExp } from "../../utils/data";
 const WorkExps = () => {
     return(
         <motion.section 
+        id="workexps"
         variants={staggerChildren}
-        initial="hidden"
+        initial="show"
         whileInView="show"
         viewport={{once: false, amount: 0.25}}
-        className={`paddings ${css.wrapper}`}>
-
-        
-            <a className="anchor" id="work"></a>
+        className={`paddings ${css.wrapper}`} 
+        style={{ scrollMarginTop: '160px',
+            position: 'relative',
+            zIndex: 1
+         }}>
 
             <div className={`flexCenter innerWidth ${css.container}`}>
                 <span className="primaryText">Work Experience</span>

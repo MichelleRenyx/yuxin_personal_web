@@ -7,14 +7,13 @@ import { fadeIn, staggerContainer, textVariant } from "../../utils/motion";
 const Experties = () => {
     return (
         <motion.section 
+        id="expertises"
         variants={staggerContainer}
         initial="hidden"
         whileInView={"show"}
         viewport={{once: false, amount: 0.25}}
-    
-        className={`paddings ${css.wrapper}`}>
-
-            <a className="anchor" id="expertises"></a>
+        className={`paddings ${css.wrapper}`}
+        style={{ scrollMarginTop: '160px' }}>
 
             <div className={`paddings yPaddings flexCenter innerWidth ${css.container}`}>
                 <div className={css.leftside}>
