@@ -4,11 +4,26 @@
     .container{
         .heading{
             flex-direction: column;
+            text-align: center;
+            
             p{
                 line-height: 30px;
+                
+                // 移动端优化
+                @media (max-width: $md) {
+                    padding: 0 1rem;
+                    text-align: center;
+                }
             }
         }
+        
         .comments{
+            // 移动端整体布局调整
+            @media (max-width: $md) {
+                padding: 0;
+                margin: 0;
+            }
+            
             .slider :global{
                 .slick-list{
                     margin: 0 0px;
@@ -16,9 +31,21 @@
                     padding: 70px 20px;
                     overflow-y: visible;
                     
+                    // 移动端padding调整
+                    @media (max-width: $md) {
+                        padding: 70px 10px 20px 10px;
+                        margin: 0;
+                    }
+                    
                     & .slick-slide>div{
                         padding: 0 30px;
+                        
+                        // 移动端减少左右padding
+                        @media (max-width: $md) {
+                            padding: 0 10px;
+                        }
                     }
+                    
                     & .slick-slide.slick-active.slick-current + .slick-slide{
                         @media (min-width: $lg){
                             transition: all 1000ms ease-out;
@@ -27,12 +54,30 @@
                         }
                     }
                 }
-                 // 添加自定义箭头样式
-                 .slick-prev, .slick-next {
-                    color: rgb(236, 166, 80); // 更改箭头颜色
+                
+                // 自定义箭头样式
+                .slick-prev, .slick-next {
+                    color: rgb(236, 166, 80);
+                    z-index: 1;
+                    
                     &:before {
-                        color: rgb(236, 166, 80); // 确保伪元素也使用新颜色
-                        font-size: 40px; // 可以调整箭头大小
+                        color: rgb(236, 166, 80);
+                        font-size: 40px;
+                        
+                        // 移动端箭头调整
+                        @media (max-width: $md) {
+                            font-size: 30px;
+                        }
+                    }
+                    
+                    // 移动端箭头位置调整
+                    @media (max-width: $md) {
+                        &.slick-prev {
+                            left: -5px;
+                        }
+                        &.slick-next {
+                            right: -5px;
+                        }
                     }
                 }
             }
@@ -46,6 +91,22 @@
                 background: white;
                 border-radius: 20px;
                 position: relative;
+                margin: 0 auto;
+                max-width: 100%;
+                
+                // 移动端优化
+                @media (max-width: $md) {
+                    padding: 2.5rem 1rem 1.5rem 1rem;
+                    margin: 0;
+                    box-sizing: border-box;
+                    width: 100%;
+                    gap: 1rem;
+                }
+                
+                @media (max-width: $sm) {
+                    padding: 3rem 0.75rem 1rem 0.75rem;
+                    gap: 0.75rem;
+                }
 
                 img{
                     margin: auto;
@@ -54,7 +115,16 @@
                     height: 3.5rem;
                     position: absolute;
                     top: -2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
                     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.08));
+                    
+                    // 移动端头像调整
+                    @media (max-width: $md) {
+                        width: 3rem;
+                        height: 3rem;
+                        top: -1.5rem;
+                    }
                 }
 
                 p{
@@ -62,26 +132,73 @@
                     font-size: 0.9rem;
                     line-height: 25px;
                     margin-bottom: 0.1rem;
+                    word-wrap: break-word;
+                    word-break: break-word;
+                    
+                    // 移动端文字调整
+                    @media (max-width: $md) {
+                        font-size: 0.85rem;
+                        line-height: 22px;
+                        text-align: left;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+
+                .paragraph {
+                    text-align: left;
+                    font-size: 0.9rem;
+                    line-height: 25px;
+                    margin-bottom: 0.5rem;
+                    word-wrap: break-word;
+                    word-break: break-word;
+                    
+                    @media (max-width: $md) {
+                        font-size: 0.85rem;
+                        line-height: 22px;
+                        margin-bottom: 0.4rem;
+                    }
+                    
+                    &:last-of-type {
+                        margin-bottom: 0.1rem;
+                    }
                 }
 
                 .line{
                     width: 100%;
                     border: 0.2px solid rgb(234 234 234);
+                    margin: 0.5rem 0;
+                    
+                    @media (max-width: $md) {
+                        margin: 0.4rem 0;
+                    }
                 }
 
                 .bio{
+                    text-align: center;
+                    
                     >*{
                         display: block;
                         text-align: center;
+                        margin: 0;
                     }
 
                     >:nth-child(1){
                         font-weight: 600;
                         margin-bottom: 5px;
+                        
+                        @media (max-width: $md) {
+                            font-size: 0.9rem;
+                        }
                     }
+                    
                     >:nth-child(2){
                         font-size: 0.7rem;
                         color: rgb(172 172 172);
+                        
+                        @media (max-width: $md) {
+                            font-size: 0.65rem;
+                        }
                     }
                 }
             }
