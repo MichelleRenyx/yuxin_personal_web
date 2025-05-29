@@ -32,7 +32,7 @@ const Hero = () => {
                 className={css.person}>
                     <motion.img 
                     variants={slideIn("up", "tween", 0.5, 1.3)}
-                    src="./yuxin.png" alt="" style={{ width: '612px', height: '410px' }} />
+                    src="./yuxin.png" alt="" />
                 </motion.div>
                 
                 
@@ -47,16 +47,28 @@ const Hero = () => {
                             <div>Experience</div>
                         </div> */}
                         <div className="secondaryText">
-                            <div>Get to know me more by: </div>
-                            <a className={css.linkedIn} href="https://www.linkedin.com/in/yuxin-michelle-ren">
+                            <div>Get to know me more by:</div>
+
+                            <div className={css.buttonGroup}>
+                                <a
+                                    className={`${css.button} ${css.linkedIn}`}
+                                    href="https://www.linkedin.com/in/yuxin-michelle-ren"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                 LinkedIn Page
-                            </a>
-                            <a className={css.cv} href="/CV.pdf" // 指向 public 文件夹中的 CV
-                                download="Yuxin_CV.pdf" // 下载时文件名
-                            >
-                                Download My CV
-                            </a>
-                        </div>
+                                </a>
+                                <a
+                                    className={`${css.button} ${css.cv}`}
+                                    href="/CV.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    {...(window.innerWidth > 768 ? { download: "Yuxin_CV.pdf" } : {})}
+                                >
+                                    View My CV
+                                </a>
+                            </div>
+                            </div>
                     </motion.div>
                     <motion.div 
                     variants={fadeIn("left", "tween", 0.3, 1)}

@@ -5,4 +5,14 @@
     position: relative;
     color: $primary;
     // height: 300vh;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+:global(.container > *:first-child) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
