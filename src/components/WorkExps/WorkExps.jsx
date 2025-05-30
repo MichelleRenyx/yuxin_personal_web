@@ -9,14 +9,15 @@ const WorkExps = () => {
         <motion.section 
         id="workexps"
         variants={staggerChildren}
-        initial="show"
+        initial="hidden"
         whileInView="show"
         viewport={{once: false, amount: 0.25}}
-        className={`paddings ${css.wrapper}`} 
-        style={{ scrollMarginTop: '160px',
+        className={`paddings ${css.wrapper}`}
+        style={{ 
+            scrollMarginTop: '160px',
             position: 'relative',
             zIndex: 1
-         }}>
+        }}>
 
             <div className={`flexCenter innerWidth ${css.container}`}>
                 <span className="primaryText">Work Experience</span>
@@ -48,8 +49,8 @@ const WorkExps = () => {
                         })
                     }
                     
-                    <motion.div variants = {zoomIn(1,1)} className={css.progressBar}>
-                        <motion.div variants = {fadeIn("down", "tween", 2, 1.5)} className={css.line}></motion.div>
+                    <motion.div variants={zoomIn(1,1)} className={css.progressBar}>
+                        <motion.div variants={fadeIn("down", "tween", 2, 1.5)} className={css.line}></motion.div>
                         <div><div className={css.circle} style={{background: "#286F6C"}}></div></div>
                         <div><div className={css.circle} style={{background: "#F2704E"}}></div></div>
                         <div><div className={css.circle} style={{background: "#EEC048"}}></div></div>

@@ -13,7 +13,7 @@ const Works = () => {
         whileInView="show"
         viewport={{once: false, amount: 0.25}}
         className={`paddings ${css.wrapper}`} 
-        style={{ scrollMarginTop: '160px' }}>、
+        style={{ scrollMarginTop: '160px' }}>
 
             <div className={`flexCenter innerWidth ${css.container}`}>
                 <span className="primaryText">Extracurricular Activities</span>

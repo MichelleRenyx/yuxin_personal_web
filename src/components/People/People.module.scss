@@ -93,6 +93,7 @@
                 position: relative;
                 margin: 0 auto;
                 max-width: 100%;
+                transition: all 0.3s ease; // 为整个卡片添加平滑过渡
                 
                 // 移动端优化
                 @media (max-width: $md) {
@@ -125,6 +126,11 @@
                         height: 3rem;
                         top: -1.5rem;
                     }
+                }
+
+                .contentWrapper {
+                    width: 100%;
+                    // 高度和overflow由JS控制
                 }
 
                 p{

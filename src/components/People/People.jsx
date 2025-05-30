@@ -7,6 +7,7 @@ import { comments, sliderSettings } from "../../utils/data";
 
 const People = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const [expandedItems, setExpandedItems] = useState(new Set());
 
     // 检测是否为移动设备
     useEffect(() => {
@@ -32,7 +33,42 @@ const People = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        autoplay: false
+        autoplay: false,
+        // 滑动前的回调 - 收起所有展开的项目
+        beforeChange: () => {
+            if (isMobile) {
+                setExpandedItems(new Set());
+            }
+        }
+    };
+
+    const handleItemToggle = (index) => {
+        if (isMobile) {
+            const newExpandedItems = new Set(expandedItems);
+            if (newExpandedItems.has(index)) {
+                newExpandedItems.delete(index);
+            } else {
+                newExpandedItems.clear(); // 只允许一个展开
+                newExpandedItems.add(index);
+            }
+            setExpandedItems(newExpandedItems);
+        }
+    };
+
+    const handleMouseEnter = (index) => {
+        if (!isMobile) {
+            const newExpandedItems = new Set(expandedItems);
+            newExpandedItems.add(index);
+            setExpandedItems(newExpandedItems);
+        }
+    };
+
+    const handleMouseLeave = (index) => {
+        if (!isMobile) {
+            const newExpandedItems = new Set(expandedItems);
+            newExpandedItems.delete(index);
+            setExpandedItems(newExpandedItems);
+        }
     };
 
     return(
@@ -50,9 +86,9 @@ const People = () => {
                 className={`yPaddings innerWidth ${css.container}`}
             >
                 <div className={`flexCenter ${css.heading}`}>
-                    <span className="primaryText">My Supporters Say</span>
+                    <span className="primaryText">Voices That Shaped My Journey</span>
                     <p style={{marginTop: "2rem"}}>
-                        Insights and endorsements from colleagues, friends, and mentors.
+                        Words of warmth from those who've lit my path, lifted my spirit, and shared in my growth.
                     </p>
                 </div>
 
@@ -64,30 +100,69 @@ const People = () => {
                     >
                         {
                             comments.map((comment, i) => {
-                                // 移动端默认显示完整内容，桌面端保持hover效果
-                                const [showFull, setShowFull] = useState(isMobile);
+                                const isExpanded = expandedItems.has(i);
                                 
                                 return (
                                     <div 
                                         key={i}
                                         className={`flexCenter ${css.comment}`} 
-                                        onMouseEnter={() => !isMobile && setShowFull(true)} 
-                                        onMouseLeave={() => !isMobile && setShowFull(false)}
-                                        onClick={() => isMobile && setShowFull(!showFull)}
+                                        onMouseEnter={() => handleMouseEnter(i)} 
+                                        onMouseLeave={() => handleMouseLeave(i)}
+                                        onClick={() => handleItemToggle(i)}
                                     >
                                         <img src={comment.img} alt={comment.name} />
                                         
-                                        {showFull ? (
-                                            comment.comment.split('\n').map((para, index) => (
-                                                <p key={index} className={css.paragraph}>
-                                                    {para.trim()}
-                                                </p>
-                                            ))
-                                        ) : (
-                                            <p>
-                                                {`${comment.comment.slice(0, 160)}${comment.comment.length > 160 ? '...' : ''}`}
-                                            </p>
-                                        )}
+                                        <motion.div
+                                            className={css.contentWrapper}
+                                            initial={false}
+                                            animate={{
+                                                height: isExpanded ? 'auto' : '80px'
+                                            }}
+                                            transition={{
+                                                duration: 0.6,
+                                                ease: [0.25, 0.1, 0.25, 1] // 自定义贝塞尔曲线：开始慢、中间快、结束慢
+                                            }}
+                                            style={{
+                                                overflow: 'hidden'
+                                            }}
+                                        >
+                                            <motion.div
+                                                initial={false}
+                                                animate={{
+                                                    opacity: isExpanded ? 1 : 1
+                                                }}
+                                                transition={{
+                                                    duration: 0.4,
+                                                    delay: isExpanded ? 0.2 : 0.2, // 展开时延迟显示，收起时立即隐藏
+                                                    ease: "easeOut"
+                                                }}
+                                            >
+                                                {isExpanded ? (
+                                                    comment.comment.split('\n').map((para, index) => (
+                                                        <motion.p 
+                                                            key={index} 
+                                                            className={css.paragraph}
+                                                            initial={false}
+                                                            animate={{
+                                                                opacity: 1,
+                                                                y: 0
+                                                            }}
+                                                            transition={{
+                                                                duration: 0.4,
+                                                                delay: 0.3 + index * 0.05, // 逐段出现
+                                                                ease: "easeOut"
+                                                            }}
+                                                        >
+                                                            {para.trim()}
+                                                        </motion.p>
+                                                    ))
+                                                ) : (
+                                                    <p>
+                                                        {`${comment.comment.slice(0, 160)}${comment.comment.length > 160 ? '...' : ''}`}
+                                                    </p>
+                                                )}
+                                            </motion.div>
+                                        </motion.div>
 
                                         <div className={css.line}></div>
 

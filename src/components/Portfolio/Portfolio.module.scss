@@ -14,6 +14,10 @@
                 text-decoration: underline;
                 color: saddlebrown;
                 cursor: pointer;
+                
+                &:hover {
+                    color: darken(saddlebrown, 10%);
+                }
             }
         }
         .showcase{
@@ -28,20 +32,59 @@
                     width: 100%;
                 }
                 border-radius: 20px;
-                max-width: 38rem;
+                max-width: 34rem;
                 max-height: 25rem;
                 box-shadow: 0px 21px 13px rgba(0,0,0,13%);
                 cursor: pointer;
-                transition: all 0.3s ease-in-out; // 平滑变化效果
+                transition: all 0.3s ease-in-out;
 
                 &:hover {
-                    // transform: scale(1.1);
-                    max-width: none;
-                    width: 40rem;
-                    height: auto;
+                    box-shadow: 0px 25px 15px rgba(0,0,0,20%);
                 }
             }
         }
     }
-}
 
+    // 简洁的图片放大展示
+    .imageOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: flex-start;
+        padding-top: 155px;  
+        cursor: pointer;
+    }
+
+    .enlargedImage {
+        max-width: 75vw; // 从90vw减小到80vw
+        max-height: 75vh; // 从90vh减小到80vh
+        object-fit: contain;
+        border-radius: 10px;
+        cursor: default;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        
+        // 大屏幕时进一步限制尺寸
+        @media (min-width: 1200px) {
+            align-items: center;
+            padding-top: 0;
+            max-width: 75vw;
+            max-height: 75vh;
+        }
+        
+        // 移动端保持较大尺寸
+        @media (max-width: 768px) {
+            align-items: center;
+            padding-top: 0;
+            max-width: 85vw;
+            max-height: 80vh;
+        }
+    }
+
+}

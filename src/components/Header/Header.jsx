@@ -87,7 +87,7 @@ const Header = () => {
                         </li>
                         <li>
                             <a href="#people" onClick={() => isMobile && setMenuOpened(false)}>
-                                Testimonials
+                                Stories & Support
                             </a>
                         </li>
                         <li className={css.contact}>

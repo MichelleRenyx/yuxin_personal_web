@@ -44,7 +44,7 @@ const Experties = () => {
                 <motion.div 
                 variants={textVariant(0.5)}
                 className={css.rightside}>
-                    <span className="primaryText">What I Excel At? </span>
+                    <span className="primaryText">What I Excel At </span>
                     {
                         // WhatDoIHelp.map((paragraph, i) => {
                         //     return <span className="smText" key={i}>{paragraph}</span>
