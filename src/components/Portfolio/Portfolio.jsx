@@ -12,7 +12,19 @@ const Portfolio = () => {
     };
 
     const handleImageClick = (imageData) => {
-        setSelectedImage(imageData);
+        // 先滚动到 Portfolio 部分
+        const portfolioElement = document.getElementById('portfolio');
+        if (portfolioElement) {
+            portfolioElement.scrollIntoView({ 
+                behavior: 'instant',
+                block: 'start'
+            });
+        }
+        
+        // 稍微延迟显示弹窗，等滚动完成
+        setTimeout(() => {
+            setSelectedImage(imageData);
+        }, 100); // 200ms 后显示弹窗
     };
 
     const handleCloseFullscreen = () => {
