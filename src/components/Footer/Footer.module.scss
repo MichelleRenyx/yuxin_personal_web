@@ -11,6 +11,7 @@
         gap: 2rem;
         align-items: flex-start;
     }
+    
     .left{
         flex: 3;
         >*{
@@ -27,29 +28,59 @@
     }
 
     .right{
-        flex:1;
-        .info{
-            margin-bottom: 1rem;
-            >*{
+        flex: 1;
+        
+        .contactInfo{
+            >*:first-child {
                 display: block;
+                margin-bottom: 1.5rem;
+                font-weight: 500;
             }
-        }
-
-        .menu{
-            @media(max-width: $sm){
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            list-style: none;
-
-            li{
-                cursor: pointer;
-
-                &hover{
+            
+            .contactItem {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-bottom: 1rem;
+                
+                svg {
                     color: $secondary;
+                    flex-shrink: 0;
+                }
+                
+                p {
+                    margin: 0;
+                    font-size: 0.95rem;
+                    line-height: 1.4;
+                    
+                    a {
+                        color: inherit;
+                        text-decoration: none;
+                        transition: color 0.2s ease;
+                        
+                        &:hover {
+                            color: $secondary;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+                // 地址项特殊样式
+                &:first-of-type {
+                    svg {
+                        color: $primary;
+                    }
+                }
+            }
+            
+            @media(max-width: $sm){
+                .contactItem {
+                    gap: 0.5rem;
+                    margin-bottom: 0.75rem;
+                    
+                    p {
+                        font-size: 0.9rem;
+                    }
                 }
             }
         }

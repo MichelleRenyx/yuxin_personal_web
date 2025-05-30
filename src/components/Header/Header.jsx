@@ -56,55 +56,58 @@ const Header = () => {
             whileInView="show"
             viewport={{once: true, amount: 0.25}}
             style={{boxShadow: headerShadow}}
-            className={`bg-primary paddings ${css.wrapper}`}
+            className={`bg-primary ${css.wrapper}`}
         >
-            <div className={`innerWidth ${css.container} flexCenter`}>
-                <div className={css.name}>
-                    Yuxin Ren
-                </div>
+            {/* 使用自定义的 paddings 和宽度控制 */}
+            <div className={css.fullWidthContainer}>
+                <div className={`innerWidth ${css.container}`}>
+                    <div className={css.name}>
+                        Yuxin Ren
+                    </div>
 
-                <ul 
-                    ref={menuRef}
-                    style={isMobile ? getMenuStyles(menuOpened) : {}}
-                    className={`flexCenter ${css.menu} ${menuOpened && isMobile ? css.menuOpen : ''}`}
-                >
-                    <li>
-                        <a href="#expertises" onClick={() => isMobile && setMenuOpened(false)}>
-                            Professional Skills
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#workexps" onClick={() => isMobile && setMenuOpened(false)}>
-                            Experience
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" onClick={() => isMobile && setMenuOpened(false)}>
-                            Portfolio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#people" onClick={() => isMobile && setMenuOpened(false)}>
-                            Testimonials
-                        </a>
-                    </li>
-                    <li className={`flexCenter ${css.contact}`}>
-                        <p><BiPhoneCall size={"30px"}/> +61 0459216814</p>
-                        <p><BiPhone size={"30px"}/> +86 18192812085</p>
-                        <p><BiEnvelope size={"30px"}/> 
-                            <a href="mailto:micheren1@outlook.com"> 
-                                micheren1@outlook.com 
+                    <ul 
+                        ref={menuRef}
+                        style={isMobile ? getMenuStyles(menuOpened) : {}}
+                        className={`${css.menu} ${menuOpened && isMobile ? css.menuOpen : ''}`}
+                    >
+                        <li>
+                            <a href="#expertises" onClick={() => isMobile && setMenuOpened(false)}>
+                                Professional Skills
                             </a>
-                        </p>
-                    </li>
-                </ul>
+                        </li>
+                        <li>
+                            <a href="#workexps" onClick={() => isMobile && setMenuOpened(false)}>
+                                Experience
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" onClick={() => isMobile && setMenuOpened(false)}>
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#people" onClick={() => isMobile && setMenuOpened(false)}>
+                                Testimonials
+                            </a>
+                        </li>
+                        <li className={css.contact}>
+                            <p><BiPhoneCall size={"30px"}/> +61 0459216814</p>
+                            <p><BiPhone size={"30px"}/> +86 18192812085</p>
+                            <p><BiEnvelope size={"30px"}/> 
+                                <a href="mailto:micheren1@outlook.com"> 
+                                    micheren1@outlook.com 
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
 
-                {/* 菜单图标 - 只在移动端显示 */}
-                <div 
-                    className={css.menuIcon}
-                    onClick={handleMenuToggle}
-                >
-                    <BiMenuAltRight size={30}/>
+                    {/* 菜单图标 - 只在移动端显示 */}
+                    <div 
+                        className={css.menuIcon}
+                        onClick={handleMenuToggle}
+                    >
+                        <BiMenuAltRight size={30}/>
+                    </div>
                 </div>
             </div>
         </motion.div>

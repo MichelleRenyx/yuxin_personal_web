@@ -1,7 +1,5 @@
 import { HiOutlineDesktopComputer } from "react-icons/hi";
-import { CiMobile1 } from "react-icons/ci";
-import { MdWorkspacesOutline } from "react-icons/md";
-import { MdOutbox } from "react-icons/md";
+import { MdPhoneIphone, MdWorkspacesOutline } from "react-icons/md";
 import { CiDatabase } from "react-icons/ci";
 export const projectExperience = [
   {
@@ -29,7 +27,7 @@ export const projectExperience = [
     name: "Tools",
     originText: "AWS, Git, Maven, Docker, Stripe, Auth0...",
     detailedText: "AWS, Git, Maven, Docker, Stripe, Auth0, Nginx, Microsoft Power, Vite, Postman, JMeter, Swagger, Springfox, Nacos",
-    icon: CiMobile1,
+    icon: MdPhoneIphone,
     bg: "#F26440",
   },
 ];
