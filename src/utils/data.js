@@ -181,3 +181,59 @@ export const sliderSettings = {
     },
   ],
 };
+
+export const projectsData = [
+  {
+    id: 1,
+    title: "OrderDash - Food Ordering & Delivery Platform",
+    image: "./OrderDash_Demo.png",
+    description: "An online food ordering and delivery platform, featuring distinct Manager and User interfaces with a frontend-backend separated architecture.",
+    technologies: ["Java", "Spring MVC", "AWS", "Redis", "Nginx", "Node.js", "MySQL", "WeChat Mini-Program"],
+    features: [
+      "Developed and managed dynamic API documentation and database schema.",
+      "Implemented the application layer, secured with JWT for authentication and AWS for storage.",
+      "Optimized database interactions and performance using MyBatis and Redis, significantly reducing query times.",
+      "Ensured system security with Nginx reverse proxy and MD5 for password encryption."
+    ]
+  },
+  {
+    id: 2,
+    title: "Intelligent Form File Processor",
+    image: "./Intelligent Form File Processor.png",
+    description: "A full-stack web platform that enables users to upload spreadsheet files and describe data processing tasks in natural language.",
+    technologies: ["Python", "Django", "JavaScript", "React", "Tailwind CSS", "AWS", "CI/CD", "Postman"],
+    features: [
+      "Built from scratch using React, Django, and LLM APIs, with a seamless front-to-back data flow.",
+      "Integrated LLM-based natural language processing to convert user input into executable data operations.",
+      "Managed backend processing logic, request handling, model invocation, and CSV generation independently.",
+      "Integrated AWS S3 for file storage and Docker + GitHub Actions for CI/CD and deployment on AWS EC2.",
+    ]
+  },
+  {
+    id: 3,
+    title: "Club-Event Management Web Application",
+    image: "./club-event_management.png",
+    description: "A web application for managing club memberships and RSVPs.",
+    technologies: ["Java Servlets", "PostgreSQL", "JSP", "JavaScript", "Git", "Docker"],
+    features: [
+      "Created and dynamically adjusted API interface documents.",
+      "Applied MVC architectural patterns and concurrency control mechanisms.",
+      "Conducted performance testing with JMeter, optimized system responsiveness and reliability under concurrent access conditions.",
+      "Coordinated frontend and backend integration, effectively resolving technical challenges and ensuring cohesive project progress towards meeting tight deadlines.",
+      "Received high praise from the instructor, with the project recognized as one of the top 5 for its technical excellence and effective teamwork.",
+    ]
+  },
+  {
+    id: 4,
+    title: "Shared WhiteBoard",
+    image: "./shared-whiteBoard.png",
+    description: "A network-based distributed shared whiteboard application, enabling multiple users to draw on a shared interactive canvas in real-time.",
+    technologies: ["Java", "JFormDesigner", "Git", "Socket"],
+    features: [
+      "Designed and implemented a decentralized server architecture where each session is initiated by a manager, optimizing for temporary collaboration and enhancing performance through data locality.",
+      "Developed a reliable communication layer using structured messaging to ensure accurate, real-time synchronization across clients.",
+      "Implemented thread-safe mechanisms with synchronization and locking to manage concurrent data access, ensuring system consistency.",
+      "Ranked in the top 15% of the cohort for project performance, demonstrating excellence in design, implementation, and delivery."
+    ]
+  }
+];

@@ -1,17 +1,20 @@
+// Portfolio.jsx
 import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import css from "./Portfolio.module.scss";
 import { fadeIn, staggerChildren } from "../../utils/motion";
 import { motion, AnimatePresence } from "framer-motion";
+import { projectsData } from "../../utils/data";
 
 const Portfolio = () => {
     const [showAll, setShowAll] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     const handleToggleShowAll = () => {
         setShowAll(!showAll);
     };
 
-    const handleImageClick = (imageData) => {
+    const handleProjectClick = (project) => {
         // 先滚动到 Portfolio 部分
         const portfolioElement = document.getElementById('portfolio');
         if (portfolioElement) {
@@ -21,127 +24,155 @@ const Portfolio = () => {
             });
         }
         
-        // 稍微延迟显示弹窗，等滚动完成
+        // 稍微延迟显示弹窗
         setTimeout(() => {
-            setSelectedImage(imageData);
-        }, 100); // 200ms 后显示弹窗
+            setSelectedProject(project);
+        }, 100);
     };
 
-    const handleCloseFullscreen = () => {
-        setSelectedImage(null);
+    const handleCloseModal = () => {
+        setSelectedProject(null);
     };
 
     // 滚动监听，自动关闭弹窗
     useEffect(() => {
         const handleScroll = () => {
-            if (selectedImage) {
-                handleCloseFullscreen();
+            if (selectedProject) {
+                handleCloseModal();
             }
         };
 
-        // 只在有弹窗时添加滚动监听
-        if (selectedImage) {
+        if (selectedProject) {
             window.addEventListener('scroll', handleScroll);
+            // 阻止背景滚动
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
         }
 
-        // 清理函数
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            document.body.style.overflow = 'unset';
         };
-    }, [selectedImage]);
+    }, [selectedProject]);
+
+    const displayedProjects = showAll ? projectsData : projectsData.slice(0, 2);
 
     return (
-        <motion.section 
-        id="portfolio"
-        variants={staggerChildren}
-        initial="hidden"
-        whileInView="show"
-        viewport={{once: false, amount: 0.25}}
-        className={`paddings ${css.wrapper}`} 
-        style={{ scrollMarginTop: '160px' }}>
-            
-            <div className={`innerWidth flexCenter ${css.container}`}>
-                <div className={`flexCenter ${css.heading}`}>
-                    <div>
-                        <span className="primaryText">My Projects</span>
-                        <p style={{marginTop: "10px"}}>The code-driven adventures in my professional odyssey.</p>
+        <>
+            <motion.section 
+                id="portfolio"
+                variants={staggerChildren}
+                initial="hidden"
+                whileInView="show"
+                viewport={{once: false, amount: 0.25}}
+                className={`paddings ${css.wrapper}`} 
+                style={{ scrollMarginTop: '160px' }}
+            >
+                
+                <div className={`innerWidth flexCenter ${css.container}`}>
+                    <div className={`flexCenter ${css.heading}`}>
+                        <div>
+                            <span className="primaryText">My Projects</span>
+                            <p style={{marginTop: "10px"}}>The code-driven adventures in my professional odyssey.</p>
+                        </div>
+                        <span className="secondaryText" onClick={handleToggleShowAll}>
+                            {showAll ? "Show Less" : "Explore More"}
+                        </span>
                     </div>
-                    <span className="secondaryText" onClick={handleToggleShowAll}>
-                        {showAll ? "Show Less" : "Explore More"}
-                    </span>
-                </div>
 
-                <div className={`flexCenter ${css.showcase}`}>
-                    <motion.img 
-                        variants={fadeIn("up", "tween", 0.5, 0.6)}
-                        src="./OrderDash_Demo.png" 
-                        alt="OrderDash Demo"
-                        onClick={() => handleImageClick({ src: "./OrderDash_Demo.png", title: "OrderDash Demo" })}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    />
-                    <motion.img 
-                        variants={fadeIn("up", "tween", 0.6, 0.6)}
-                        src="./Intelligent Form File Processor.png" 
-                        alt="Intelligent Form Processor"
-                        onClick={() => handleImageClick({ src: "./Intelligent Form File Processor.png", title: "Intelligent Form Processor" })}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    />
-                    
-                    {/* Show All 时显示额外的图片 */}
-                    {showAll && (
-                        <>
+                    <div className={`flexCenter ${css.showcase}`}>
+                        {displayedProjects.map((project, index) => (
                             <motion.img 
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.1 }}
-                                src="./club-event_management.png" 
-                                alt="Club Event Management"
-                                onClick={() => handleImageClick({ src: "./club-event_management.png", title: "Club Event Management" })}
+                                key={project.id}
+                                variants={fadeIn("up", "tween", 0.5 + index * 0.1, 0.6)}
+                                src={project.image} 
+                                alt={project.title}
+                                onClick={() => handleProjectClick(project)}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                className={css.projectImage}
+                                initial={index >= 2 ? { opacity: 0, y: 20 } : {}}
+                                animate={index >= 2 ? { opacity: 1, y: 0 } : {}}
+                                transition={{ duration: 0.6, delay: (index - 2) * 0.1 }}
                             />
-                            <motion.img 
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                                src="./shared-whiteBoard.png" 
-                                alt="Shared WhiteBoard"
-                                onClick={() => handleImageClick({ src: "./shared-whiteBoard.png", title: "Shared WhiteBoard" })}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            />
-                        </>
-                    )}
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </motion.section>
 
-            {/* 简洁的图片放大展示 */}
-            <AnimatePresence>
-                {selectedImage && (
+            {/* 使用Portal将弹窗渲染到body */}
+            {selectedProject && createPortal(
+                <AnimatePresence>
                     <motion.div
-                        className={css.imageOverlay}
+                        className={css.modalOverlay}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        onClick={handleCloseFullscreen}
+                        onClick={handleCloseModal}
                     >
-                        <motion.img
-                            src={selectedImage.src}
-                            alt={selectedImage.title}
-                            className={css.enlargedImage}
+                        <motion.div
+                            className={css.modalContent}
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.8, opacity: 0 }}
                             transition={{ duration: 0.25, ease: "easeOut" }}
                             onClick={(e) => e.stopPropagation()}
-                        />
+                        >
+                            {/* 头部 */}
+                            <div className={css.modalHeader}>
+                                <div className={css.modalTitle}>
+                                    <h2>{selectedProject.title}</h2>
+                                </div>
+                                <button className={css.closeButton} onClick={handleCloseModal}>
+                                    ×
+                                </button>
+                            </div>
+
+                            <div className={css.modalBody}>
+                                {/* 左侧：项目图片和概览 */}
+                                <div className={css.modalLeft}>
+                                    <div className={css.modalImage}>
+                                        <img src={selectedProject.image} alt={selectedProject.title} />
+                                    </div>
+                                    <div className={css.overview}>
+                                        <h3>Overview</h3>
+                                        <p>{selectedProject.description}</p>
+                                    </div>
+                                </div>
+
+                                {/* 右侧：技术栈和功能 */}
+                                <div className={css.modalRight}>
+                                    <div className={css.technologiesSection}>
+                                        <h3>Tech Stacks</h3>
+                                        <div className={css.technologiesGrid}>
+                                            {selectedProject.technologies.map((tech) => (
+                                                <span key={tech} className={css.technologyTag}>
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className={css.featuresSection}>
+                                        <h3>Key Features</h3>
+                                        <ul className={css.featuresList}>
+                                            {selectedProject.features.map((feature, index) => (
+                                                <li key={index}>
+                                                    <span className={css.bulletPoint}></span>
+                                                    {feature}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
                     </motion.div>
-                )}
-            </AnimatePresence>
-        </motion.section>
+                </AnimatePresence>,
+                document.body // 直接渲染到body
+            )}
+        </>
     )
 }
 

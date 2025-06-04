@@ -27,7 +27,7 @@
             flex-wrap: wrap;
             overflow: visible;
 
-            >img{
+            .projectImage{
                 @media(max-width: $sm){
                     width: 100%;
                 }
@@ -44,46 +44,183 @@
             }
         }
     }
+}
 
-    // 简洁的图片放大展示
-    .imageOverlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.85);
-        z-index: 999;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        padding-top: 155px;  
+// 弹窗样式 - 现在通过Portal渲染到body，不会被任何组件遮挡
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modalContent {
+    background: white;
+    border-radius: 12px;
+    max-width: 64rem;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+
+    .modalTitle {
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: #6b7280;
+            line-height: 1.5;
+        }
+    }
+
+    .closeButton {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #6b7280;
         cursor: pointer;
-    }
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.2s;
 
-    .enlargedImage {
-        max-width: 75vw; // 从90vw减小到80vw
-        max-height: 75vh; // 从90vh减小到80vh
-        object-fit: contain;
-        border-radius: 10px;
-        cursor: default;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        
-        // 大屏幕时进一步限制尺寸
-        @media (min-width: 1200px) {
-            align-items: center;
-            padding-top: 0;
-            max-width: 75vw;
-            max-height: 75vh;
-        }
-        
-        // 移动端保持较大尺寸
-        @media (max-width: 768px) {
-            align-items: center;
-            padding-top: 0;
-            max-width: 85vw;
-            max-height: 80vh;
+        &:hover {
+            background: #f3f4f6;
         }
     }
+}
 
+.modalBody {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.modalLeft {
+    .modalImage {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .overview {
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+    }
+    
+}
+
+.modalRight {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .technologiesSection {
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        .technologiesGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+
+            @media(max-width: $sm) {
+                grid-template-columns: 1fr;
+            }
+
+            .technologyTag {
+                background: #fff6e8;
+                color: #374151;
+                padding: 0.5rem 0.75rem;
+                border-radius: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+
+    .featuresSection {
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        .featuresList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+                color: #6b7280;
+                font-size: 0.875rem;
+                line-height: 1.5;
+                margin-bottom: 0.5rem;
+
+                .bulletPoint {
+                    width: 6px;
+                    height: 6px;
+                    background: #3b82f6;
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
 }
