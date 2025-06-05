@@ -1,0 +1,123 @@
+@import '../../styles/contants.scss';
+
+.wrapper {
+    overflow: hidden;
+
+    .container{
+        position: relative;
+        z-index: 1;
+
+        .upperElements{
+            @media (max-width: $sm){
+                justify-content: center;
+                text-align: center;
+                gap: 2rem;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .lowerElements{
+            @media (max-width: $sm), (max-width: $md){
+                margin-top: 4rem;
+                gap: 2rem;
+                justify-content: center;
+            }
+            margin-top: 12rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .experience{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                >:nth-child(2){
+                    line-height: 25px;
+                }
+            }
+
+            .certificate{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    margin-bottom: 1rem;
+                    width: 3.5rem;
+                }
+            }
+        }
+        .person{
+            @media (max-width: $sm), (max-width: $md){
+                position: relative;
+                left: 0;
+                background-size: 20rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-position: bottom;
+            }
+            position: absolute;
+            bottom: -2.5rem;
+            margin: auto;
+            background-image: url('../splash.png');
+            background-repeat: no-repeat;
+            background-size: 30rem;
+            left: 28%;
+            @media (max-width: $md) {
+                background-size: 20rem;
+                background-position: center bottom;
+            }
+
+            @media (max-width: $sm) {
+                background-size: 10rem;
+                background-position: 39% bottom;;
+            }
+            img{
+                width: 38rem; // 默认桌面尺寸
+                height: auto;
+                margin-bottom: -5px;
+                @media (max-width: $md) {
+                width: 28rem;
+                }
+                @media (max-width: $sm) {
+                width: 18rem;
+                }
+            }
+        }
+        .buttonGroup {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            @media (max-width: $sm) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+                margin-top: 0.5rem;
+            }
+        }
+
+        .button {
+            background: transparent;
+            color: #5a5a5a;
+            padding: 0.2rem 0.4rem;
+            font-size: 0.85rem;
+            border: none;
+            text-decoration: underline;
+
+            &:hover {
+                background-color: #f5e6d3;
+            }
+
+            @media (max-width: $sm) {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.6rem;
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+        }
+    }
+}

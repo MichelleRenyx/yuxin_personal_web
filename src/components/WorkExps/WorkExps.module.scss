@@ -1,0 +1,278 @@
+@import '../../styles/contants.scss';
+
+.wrapper{
+    background: #FCF9EF;
+
+    .container{
+        flex-direction: column;
+        gap: 2rem;
+        
+        .experience{
+            width: 100%;
+            flex-direction: column;
+            gap: 1.4rem;
+            position: relative;
+
+            .exp{
+                width: 100%;
+                justify-content: space-between;
+                line-height: 40px;
+                align-items: flex-start;
+
+                >div {
+                    flex:1;
+                }
+
+                .post {
+                    h1 {
+                        background: #f0e4d2 !important;
+                        border-radius: 12px !important;
+                        padding: 0.8rem 1.2rem !important;
+                        margin-bottom: 0.5rem !important;
+                        font-weight: 600 !important;
+                        color: #8b4513 !important;
+                        box-shadow: 0 2px 8px rgba(212, 165, 116, 0.3) !important;
+                        display: inline-block !important;
+                        transition: all 0.3s ease !important;
+                        
+                        &:hover {
+                            transform: translateY(-2px) !important;
+                            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.4) !important;
+                        }
+                    }
+                    
+                    p {
+                        margin-top: 0.2rem;
+                    }
+                }
+
+                .role{
+                    margin-left: 2rem;
+
+                    .techStack{
+                        color: black;
+                        font-weight: bold;
+                    }
+                    .awardsText p {
+                        position: relative;
+                        padding-left: 20px;
+                    }
+
+                    .awardsText p::before {
+                        content: '•'; /* bullet point */
+                        color: black;
+                        font-weight: bold;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+                
+            }
+
+            .progressBar{
+                position: absolute;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1.4rem;
+                left: 48%;
+
+                .line{
+                    position: absolute;
+                    height: 100%;
+                    width: 2px;
+                    background-image: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
+                    background-position: right;
+                    background-size: 2px 30px;
+                    background-repeat: repeat-y;
+                    left: 46%;
+                    z-index: 1;
+                    border-radius: 5px;
+                }
+                >div{
+                    flex: 1;
+                    padding-top: 0.8rem;
+                    z-index: 2;
+
+                    .circle{
+                        border-radius: 50%;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 移动端响应式设计 */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 2rem 1rem; /* 减少内边距 */
+        
+        .container {
+            gap: 1.5rem;
+            
+            .experience {
+                gap: 2rem; /* 增加经验项之间的间距 */
+                
+                .exp {
+                    flex-direction: column; /* 改为垂直布局 */
+                    align-items: flex-start;
+                    gap: 0.1rem;
+                    position: relative;
+                    padding-left: 2rem; /* 为进度条留出空间 */
+                    min-height: 150px; /* 确保有足够高度 */
+                    
+                    .post {
+                        width: 100%;
+                        
+                        h1 {
+                            background: #f0e4d2 !important;
+                            border-radius: 10px !important;
+                            padding: 0.6rem 1rem !important;
+                            margin-bottom: 0.1rem !important;
+                            font-weight: 600 !important;
+                            color: #8b4513 !important;
+                            box-shadow: 0 2px 6px rgba(212, 165, 116, 0.25) !important;
+                            display: inline-block !important;
+                            font-size: 1.1rem !important; /* 调整标题大小 */
+                        }
+                        
+                        p {
+                            font-size: 0.9rem;
+                            opacity: 0.8;
+                            margin-top: 0.1rem;
+                        }
+                    }
+                    
+                    .role {
+                        margin-left: 0; /* 移除左边距 */
+                        width: 100%;
+                        
+                        h1 {
+                            font-size: 1.1rem;
+                            margin-bottom: 0.2rem;
+                        }
+                        
+                        p {
+                            font-size: 0.9rem;
+                            line-height: 1.5;
+                            margin-bottom: 0.3rem;
+                        }
+                        
+                        .techStack {
+                            margin-bottom: 1rem;
+                            
+                            p {
+                                font-size: 0.85rem;
+                                background: rgba(40, 111, 108, 0.1);
+                                padding: 0.5rem;
+                                border-radius: 5px;
+                                display: inline-block;
+                            }
+                        }
+                        
+                        .awardsText {
+                            p {
+                                font-size: 0.85rem;
+                                line-height: 1.4;
+                                margin-bottom: 0.5rem;
+                                padding-left: 15px;
+                            }
+                            
+                            p::before {
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+                
+                .progressBar {
+                    left: 0; /* 移到左边 */
+                    width: 2px;
+                    
+                    .line {
+                        left: 0;
+                        background-size: 2px 20px; /* 调整虚线间距 */
+                    }
+                    
+                    > div {
+                        padding-top: 1rem;
+                        
+                        .circle {
+                            width: 0.8rem;
+                            height: 0.8rem;
+                            margin-left: -0.3rem; /* 居中对齐 */
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 小屏幕手机 */
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 1.5rem 0.5rem;
+        
+        .container {
+            .experience {
+                .exp {
+                    padding-left: 1.5rem;
+                    min-height: 120px;
+                    
+                    .post {
+                        h1 {
+                            background: #f0e4d2 !important;
+                            border-radius: 8px !important;
+                            padding: 0.5rem 0.8rem !important;
+                            margin-bottom: 0.2rem !important;
+                            font-weight: 600 !important;
+                            color: #8b4513 !important;
+                            box-shadow: 0 1px 4px rgba(212, 165, 116, 0.2) !important;
+                            display: inline-block !important;
+                            font-size: 0.95rem !important;
+                        }
+                        
+                        p {
+                            font-size: 0.8rem;
+                        }
+                    }
+                    
+                    .role {
+                        h1 {
+                            font-size: 1rem;
+                        }
+                        
+                        p {
+                            font-size: 0.8rem;
+                        }
+                        
+                        .techStack p {
+                            font-size: 0.75rem;
+                            padding: 0.3rem;
+                        }
+                        
+                        .awardsText p {
+                            font-size: 0.75rem;
+                            padding-left: 12px;
+                        }
+                    }
+                }
+                
+                .progressBar {
+                    > div {
+                        .circle {
+                            width: 0.6rem;
+                            height: 0.6rem;
+                            margin-left: -0.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

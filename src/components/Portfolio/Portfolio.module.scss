@@ -1,0 +1,226 @@
+@import '../../styles/contants.scss';
+
+.wrapper{ 
+    .container{
+        flex-direction: column;
+        gap: 2rem;
+
+        .heading{
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            >:nth-child(2){
+                text-decoration: underline;
+                color: saddlebrown;
+                cursor: pointer;
+                
+                &:hover {
+                    color: darken(saddlebrown, 10%);
+                }
+            }
+        }
+        .showcase{
+            width: 100%;
+            gap: 1.5rem;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            overflow: visible;
+
+            .projectImage{
+                @media(max-width: $sm){
+                    width: 100%;
+                }
+                border-radius: 20px;
+                max-width: 34rem;
+                max-height: 25rem;
+                box-shadow: 0px 21px 13px rgba(0,0,0,13%);
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    box-shadow: 0px 25px 15px rgba(0,0,0,20%);
+                }
+            }
+        }
+    }
+}
+
+// 弹窗样式 - 现在通过Portal渲染到body，不会被任何组件遮挡
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modalContent {
+    background: white;
+    border-radius: 12px;
+    max-width: 64rem;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+
+    .modalTitle {
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: #6b7280;
+            line-height: 1.5;
+        }
+    }
+
+    .closeButton {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #6b7280;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background: #f3f4f6;
+        }
+    }
+}
+
+.modalBody {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.modalLeft {
+    .modalImage {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .overview {
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+    }
+    
+}
+
+.modalRight {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .technologiesSection {
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        .technologiesGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+
+            @media(max-width: $sm) {
+                grid-template-columns: 1fr;
+            }
+
+            .technologyTag {
+                background: #fff6e8;
+                color: #374151;
+                padding: 0.5rem 0.75rem;
+                border-radius: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+
+    .featuresSection {
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        .featuresList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+                color: #6b7280;
+                font-size: 0.875rem;
+                line-height: 1.5;
+                margin-bottom: 0.5rem;
+
+                .bulletPoint {
+                    width: 6px;
+                    height: 6px;
+                    background: #3b82f6;
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+}

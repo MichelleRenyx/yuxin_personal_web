@@ -1,2 +1,1 @@
-# yuxin_personal_web
-yuxin's personal web
+This is a personal web of Yuxin Ren, builded based on https://youtubebinjanportfolio.pages.dev

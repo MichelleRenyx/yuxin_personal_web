@@ -1,0 +1,86 @@
+@import '../../styles/contants.scss';
+
+.wrapper{
+    background: white;
+
+    .container{
+        align-items: flex-start;
+        gap: 2rem;
+        flex-wrap: wrap;
+        >div{
+            flex: 1;
+        }
+
+        .leftside{
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+
+            .exp{
+                display: flex;
+                align-items: center;
+                border: 1px solid $secondary-white;
+                border-radius: 20px;
+                padding: 0.7rem;
+                gap: 1rem;
+                transition: all 200ms ease-out;
+
+                &:hover{
+                    cursor: pointer;
+                    box-shadow: 0px 21px 13px rgba(0, 0, 0, 0.4);
+                }
+
+                >:nth-child(1){
+                    padding: 10px;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 999px;
+                }
+
+                >:nth-child(2){
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+
+                    >:nth-child(1){
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .rightside{
+            @media (max-width: $sm){
+                text-align: center;
+                gap: 2rem;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .stats{
+                justify-content: flex-start;
+                gap: 5rem;
+
+                .techStack {
+                    display: flex; /* 横向排列 */
+                    gap: 0.8rem; /* 设置图标之间的间距 */
+                    justify-content: center; /* 图标水平居中 */
+                    flex-wrap: wrap; /* 如果屏幕空间不足，换行排列 */
+                  }
+                  
+                  .techIcon {
+                    width: 40px; /* 固定宽度 */
+                    height: 40px; /* 固定高度 */
+                    object-fit: contain; /* 保证图片比例不变 */
+                    transition: transform 0.2s ease; /* 添加轻微的缩放动画 */
+                  
+                    &:hover {
+                      transform: scale(1.1); /* 悬停时放大 */
+                    }
+                }
+            }
+        }
+    }
+}
