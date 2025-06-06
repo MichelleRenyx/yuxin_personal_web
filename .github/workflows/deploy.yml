@@ -10,6 +10,7 @@ on:
         description: 'Branch to deploy'
         required: true
         default: 'main'
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -38,6 +39,12 @@ jobs:
 
       - name: Deploy to S3
         run: aws s3 sync ./dist s3://www.yuxin-ren.com --delete
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} \
+            --paths "/*"
 
       - name: Purge Cloudflare Cache
         run: |
