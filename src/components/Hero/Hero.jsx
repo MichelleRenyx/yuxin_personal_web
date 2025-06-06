@@ -23,7 +23,7 @@ const Hero = () => {
                     <motion.span 
                     variants={fadeIn("left", "tween", 0.3, 1)} 
                     className="secondaryText">
-                        It's great to meet you here :)
+                        You've just landed in - <br/> My little corner of the Internet 🪐
                     </motion.span>
                 </div>
 
@@ -47,7 +47,7 @@ const Hero = () => {
                             <div>Experience</div>
                         </div> */}
                         <div className="secondaryText">
-                            <div>Get to know me more by:</div>
+                            <div>Let's connect and discover more:</div>
 
                             <div className={css.buttonGroup}>
                                 <a
@@ -56,7 +56,7 @@ const Hero = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                LinkedIn Page
+                                    My LinkedIn
                                 </a>
                                 <a
                                     className={`${css.button} ${css.cv}`}
@@ -65,7 +65,7 @@ const Hero = () => {
                                     rel="noopener noreferrer"
                                     {...(window.innerWidth > 768 ? { download: "Yuxin_CV.pdf" } : {})}
                                 >
-                                    View My CV
+                                    My CV
                                 </a>
                             </div>
                             </div>

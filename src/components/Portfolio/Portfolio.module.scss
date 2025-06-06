@@ -78,6 +78,10 @@
     align-items: flex-start;
     padding: 1.5rem;
     border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
 
     .modalTitle {
         h2 {
@@ -171,7 +175,7 @@
 
         .technologiesGrid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 0.5rem;
 
             @media(max-width: $sm) {

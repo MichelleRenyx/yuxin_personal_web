@@ -100,9 +100,16 @@ export const comments = [
       "Yuxin is the most remarkable people I have ever met. We became friends during our undergraduate years, and knowing her remains one of the greatest privileges of my life.\nThroughout university, we had the chance to work together on numerous projects, competitions, and activities. Her creativity shines through in everything she does, and she has a natural ability to guide and inspire others while remaining humble, loyal, and an excellent team player. \nAbove all, her presence brings joy to everyone around her. I am confident she will continue to make a meaningful impact wherever she goes.",
     img: "./wanyu.png",
   },
-    {
+  {
+    name: "Shawn Li",
+    post: "Software Engineer @Performio",
+    comment:
+      "Yuxin demonstrated exceptional professionalism during her 4-month internship as a software engineer at Rhombus AI. As her technical buddy, I was continually impressed by her eagerness to take on challenges and her determination to overcome obstacles along the way. She consistently showed initiative and took full ownership of end-to-end feature delivery, thriving in our fast-paced startup environment. Her presence on the team brought a sense of reliability and assurance.\nIt has truly been a privilege to work alongside Yuxin. I’m confident she will continue to grow and excel on her journey ahead as an outstanding software engineer.",
+    img: "./shawn.png",
+  },
+  {
     name: "Xinyi Zhou",
-    post: "Assistant audit in KPMG UK",
+    post: "Assistant Audit @KPMG",
     comment:
       "Yuxin is the most powerful and inspiring woman I have ever met. She is incredibly helpful and supportive, always there for me when I face challenges or have doubts about life. One of her most admirable qualities is her clarity of purpose—Yuxin always knows what she wants and stays focused on achieving her goals. \nHer determination is remarkable—she started studying overseas in a completely new field, which requires immense courage and adaptability. Yet, she not only embraced the challenge but excels at it. \nYuxin is unafraid of challenges and learns quickly. We were classmates in high school, which happened to be the most competitive school in our province. Even in such a demanding environment, she stood out as a top performer while always finding time to help others whenever she could.",
     img: "./xinyi.png",
@@ -188,7 +195,7 @@ export const projectsData = [
     title: "OrderDash - Food Ordering & Delivery Platform",
     image: "./OrderDash_Demo.png",
     description: "An online food ordering and delivery platform, featuring distinct Manager and User interfaces with a frontend-backend separated architecture.",
-    technologies: ["Java", "Spring MVC", "AWS", "Redis", "Nginx", "Node.js", "MySQL", "WeChat Mini-Program"],
+    technologies: ["Java", "Spring Boot", "AWS", "Redis", "Nginx", "Node.js", "MySQL", "Knife4j", "MyBatis", "Git", "Docker", "Postman"],
     features: [
       "Developed and managed dynamic API documentation and database schema.",
       "Implemented the application layer, secured with JWT for authentication and AWS for storage.",
@@ -201,7 +208,7 @@ export const projectsData = [
     title: "Intelligent Form File Processor",
     image: "./Intelligent Form File Processor.png",
     description: "A full-stack web platform that enables users to upload spreadsheet files and describe data processing tasks in natural language.",
-    technologies: ["Python", "Django", "JavaScript", "React", "Tailwind CSS", "AWS", "CI/CD", "Postman"],
+    technologies: ["Python", "Django", "JavaScript", "React", "Tailwind CSS", "AWS", "CI/CD", "Git", "Postman"],
     features: [
       "Built from scratch using React, Django, and LLM APIs, with a seamless front-to-back data flow.",
       "Integrated LLM-based natural language processing to convert user input into executable data operations.",
@@ -213,7 +220,7 @@ export const projectsData = [
     id: 3,
     title: "Club-Event Management Web Application",
     image: "./club-event_management.png",
-    description: "A web application for managing club memberships and RSVPs.",
+    description: "A web application for managing club memberships, submitting/approving reimbursement and event RSVPs.",
     technologies: ["Java Servlets", "PostgreSQL", "JSP", "JavaScript", "Git", "Docker"],
     features: [
       "Created and dynamically adjusted API interface documents.",
