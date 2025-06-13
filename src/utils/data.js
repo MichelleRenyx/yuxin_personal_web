@@ -87,18 +87,18 @@ export const workExp = [
 
 export const comments = [
   {
+    name: "Jing Zhou",
+    post: "Chief Engineer for Electrical Control @Goldwind",
+    comment:
+      "Yuxin demonstrates maturity and professionalism beyond her age. With a solid technical foundation and agile thinking, she delivers results efficiently and reliably. Proactive, diligent, and adept at tackling challenges, she excels in communication and coordination, swiftly integrating into teams. Combining strong professional competence with outstanding leadership, she stands out as a rare composite talent.",
+    img: "./Jing Zhou.jpeg",
+  },
+  {
     name: "Lili Chen",
-    post: "Associate Lecturer @UniMelb",
+    post: "Associate Lecturer @UniMelb \n \n Chair @IEEE WIE AG Unimelb Student Branch 2024-2025",
     comment:
       "Yuxin is a fantastic team player and an incredibly dedicated individual. As the Vice-Chair of our IEEE Women in Engineering (WIE) club at the University of Melbourne, she has consistently gone above and beyond to support the success of our organisation. \n Yuxin is exceptionally responsible and always completes her tasks on time and to a high standard. She has been instrumental in organising several successful events, demonstrating strong team management and coordination skills. Additionally, she took charge of advertising for our activities, creating visually stunning posters that were both creative and perfectly aligned with the event themes. \n Yuxin's reliability, creativity, and collaborative nature make her an invaluable asset to any team. ",
     img: "./lili.png",
-  },
-  {
-    name: "Wanyu Li",
-    post: "Engineer @Meta",
-    comment:
-      "Yuxin is the most remarkable people I have ever met. We became friends during our undergraduate years, and knowing her remains one of the greatest privileges of my life.\nThroughout university, we had the chance to work together on numerous projects, competitions, and activities. Her creativity shines through in everything she does, and she has a natural ability to guide and inspire others while remaining humble, loyal, and an excellent team player. \nAbove all, her presence brings joy to everyone around her. I am confident she will continue to make a meaningful impact wherever she goes.",
-    img: "./wanyu.png",
   },
   {
     name: "Shawn Li",
@@ -106,6 +106,13 @@ export const comments = [
     comment:
       "Yuxin demonstrated exceptional professionalism during her 4-month internship as a software engineer at Rhombus AI. As her technical buddy, I was continually impressed by her eagerness to take on challenges and her determination to overcome obstacles along the way. She consistently showed initiative and took full ownership of end-to-end feature delivery, thriving in our fast-paced startup environment. Her presence on the team brought a sense of reliability and assurance.\nIt has truly been a privilege to work alongside Yuxin. I’m confident she will continue to grow and excel on her journey ahead as an outstanding software engineer.",
     img: "./shawn.png",
+  },
+  {
+    name: "Wanyu Li",
+    post: "Engineer @Meta",
+    comment:
+      "Yuxin is the most remarkable people I have ever met. We became friends during our undergraduate years, and knowing her remains one of the greatest privileges of my life.\nThroughout university, we had the chance to work together on numerous projects, competitions, and activities. Her creativity shines through in everything she does, and she has a natural ability to guide and inspire others while remaining humble, loyal, and an excellent team player. \nAbove all, her presence brings joy to everyone around her. I am confident she will continue to make a meaningful impact wherever she goes.",
+    img: "./wanyu.png",
   },
   {
     name: "Xinyi Zhou",
@@ -116,7 +123,7 @@ export const comments = [
   },
   {
     name: "Yushan Hou",
-    post: "Engineer @Jemena",
+    post: "Engineer @Jemena\n \n Chair @IEEE WIE AG Unimelb Student Branch 2023-2024",
     comment:
       "Yuxin is super responsible and really easy to get along with. Over the past years, working with her in the Women in Engineering Student Branch has been a pleasure. She's always on top of her tasks and gets everything done on time. She's also great at working with others and makes collaboration feel smooth and effortless.",
     img: "./yushan.png",
