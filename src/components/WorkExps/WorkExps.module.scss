@@ -66,6 +66,19 @@
                         left: 0;
                         top: 0;
                     }
+                    .viewDetailBtn {
+                        background: none;
+                        border: none;
+                        color: #8b4513;
+                        font-weight: 700;
+                        cursor: pointer;
+                        margin-top: 0.5rem;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: #5d2e0d;
+                        }
+                    }
                 }
                 
             }

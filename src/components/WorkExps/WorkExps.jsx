@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import css from "./WorkExps.module.scss";
 import { motion } from "framer-motion";
 import {fadeIn, staggerChildren, textVariant2, zoomIn} from "../../utils/motion";
 import { workExp } from "../../utils/data";
 
 const WorkExps = () => {
+    const [awardsExpanded, setAwardsExpanded] = useState(
+    Array(workExp.length).fill(false)
+    );
+
+    const toggleAwards = (index) => {
+    const newState = [...awardsExpanded];
+    newState[index] = !newState[index];
+    setAwardsExpanded(newState);
+    };
     return(
         <motion.section 
         id="workexps"
@@ -38,11 +47,23 @@ const WorkExps = () => {
                                     <div className={css.techStack}>
                                         <p>{exp.techStack}</p>
                                     </div>
-                                    <div className={css.awardsText}>
+                                    {/* <div className={css.awardsText}>
                                         {exp.awards.split('\n').map((item, index) => (
                                         <p key={index}>{item}</p>
                                         ))}
+                                    </div> */}
+                                    <div className={css.awardsText}>
+                                        {awardsExpanded[i]
+                                        ? exp.awards.split("\n").map((item, index) => <p key={index}>{item}</p>)
+                                        : <p>{exp.awards.split("\n")[0]}...</p>
+                                        }
                                     </div>
+                                    <button
+                                        className={css.viewDetailBtn}
+                                        onClick={() => toggleAwards(i)}
+                                    >
+                                        {awardsExpanded[i] ? "Hide Details" : "View Details"}
+                                    </button>
                                 </div>
                             </motion.div>
                             ) 

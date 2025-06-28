@@ -94,7 +94,7 @@ const Portfolio = () => {
                                 className={css.projectImage}
                                 initial={index >= 2 ? { opacity: 0, y: 20 } : {}}
                                 animate={index >= 2 ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.6, delay: (index - 2) * 0.1 }}
+                                transition={{ duration: 0.3, delay: (index - 2) * 0.1 }}
                             />
                         ))}
                     </div>
