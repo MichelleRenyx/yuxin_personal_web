@@ -17,9 +17,9 @@ const Footer = () => {
             className={`innerWidth yPaddings flexCenter ${css.container}`}>
                 <div className={css.left}>
                     <span className="primaryText">
-                    Let’s create something remarkable together.
+                    Let's create something remarkable together.
                     </span>
-                    <span className="secondaryText">"If you are interested in my profile and would like to discuss potential opportunities, please feel free to <a href="mailto: micheren1@outlook.com">leave me a message</a>. I am eager to connect and explore how I can contribute to your team.".</span>
+                    <span className="secondaryText">"If you are interested in my profile and would like to discuss potential opportunities, please feel free to <a href="mailto: micheren1@outlook.com">leave me a message</a>. I am eager to connect and explore how I can contribute to your team."</span>
                 </div>    
                 <div className={css.right}>
                     <div className={css.contactInfo}>
