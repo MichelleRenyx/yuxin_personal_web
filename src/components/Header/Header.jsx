@@ -113,9 +113,9 @@ const Header = () => {
                                     href="/CV.pdf" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    download="Yuxin_CV.pdf"
+                                    download="Yuxin_Resume.pdf"
                                 > 
-                                    My CV
+                                    Resume
                                 </a>
                             </p>
                         </li>
