@@ -78,6 +78,7 @@ const Experties = () => {
                             <img src="./typescript.svg" alt="typescript-icon" className={css.techIcon} />
                             <img src="./python.svg" alt="python-icon" className={css.techIcon} />
                             <img src="./django.svg" alt="django-icon" className={css.techIcon} />
+                            <img src="./swift.svg" alt="swift-icon" className={css.techIcon} />
                             <img src="./react.svg" alt="react-icon" className={css.techIcon} />
                             <img src="./mysql.svg" alt="mysql-icon" className={css.techIcon} />
                             <img src="./postgresql.svg" alt="postgresql-icon" className={css.techIcon} />

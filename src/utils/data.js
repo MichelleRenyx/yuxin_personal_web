@@ -4,8 +4,8 @@ import { CiDatabase } from "react-icons/ci";
 export const projectExperience = [
   {
     name: "Languages",
-    originText: "Python, Java, JavaScript, TypeScript, SQL...",
-    detailedText: "Python, Java, JavaScript, TypeScript, SQL, HTML, CSS",
+    originText: "Python, Java, Swift, JavaScript, TypeScript...",
+    detailedText: "Python, Java, Swift, JavaScript, TypeScript, SQL, HTML, CSS",
     icon: MdWorkspacesOutline,
     bg: "#286F6C",
   },
@@ -34,11 +34,11 @@ export const projectExperience = [
 
 export const WhatDoIHelp = [
   "I am a results-oriented and innovative Software Engineer specializing in Full-Stack Software Development, with a solid foundation in various commonly used development technologies.",
-  "Proficient in Python, Java, JavaScript, TypeScript and RESTful APIs, with extensive experience in CI/CD, DevOps and Cloud technologies (AWS). Demonstrated expertise in working within Agile development environment, focusing on delivering practical, production-ready projects on time.",
+  "Proficient in Python, Java, Swift, JavaScript, TypeScript and RESTful APIs, with extensive experience in CI/CD, DevOps and Cloud technologies (AWS). Demonstrated expertise in working within Agile development environment, focusing on delivering practical, production-ready projects on time.",
   "I approach challenges with adaptability, effective communication, demonstrating strong problem-solving skills and a collaborative mindset that enables me to thrive in dynamic environments.",
 ];
 
-export const boldWords = ["•", "Python", "JavaScript", "Java", "TypeScript", "Spring Boot", "RESTful APIs", "DevOps", "Micro-Service","CI/CD", "Cloud", "AWS", "Agile", "production-ready", "problem-solving", "collaborative", "web application development"];
+export const boldWords = ["•", "Python", "JavaScript", "Swift", "Java", "TypeScript", "Spring Boot", "RESTful APIs", "DevOps", "Micro-Service","CI/CD", "Cloud", "AWS", "Agile", "production-ready", "problem-solving", "collaborative", "web application development"];
 
 export const works = [
   {
@@ -60,26 +60,38 @@ export const works = [
 
 export const workExp = [
   {
+    place: "Senstride",
+    link: "https://www.linkedin.com/company/senstride/",
+    tenure: "Jul 2025 - Now",
+    role: "Software Engineer",
+    detail: "Designed and developed a cross-platform gait assessment system, including an iOS mobile app and a clinician-facing web dashboard, to support elderly fall prevention.",
+    techStack: "Swift, SwiftUI, Python, AWS, JavaScript, Git, Figma",
+    awards: "Built the iOS app using Swift and MVVM architecture, and created 10+ responsive views with iterative UI/UX design in Figma.\n Developed a web dashboard for clinicians to manage patients, assessments, and gait metrics. \n Integrated AWS (RDS) to ensure secure, scalable data storage compliant with medical workflows.\n Collaborate with stakeholders across teams to deliver production-ready features and improve user experience.",
+  },
+  {
     place: "Rhombus AI",
+    link: "https://rhombusai.com/",
     tenure: "Feb 2025 - May 2025",
     role: "Full-Stack Software Engineer",
-    detail: "Developed full-stack capabilities by refining UI components with React and integrating backend functionalities using Django, with a focus on enhancing cloud deployment, automated testing, and AI integration.",
+    detail: "Contributed to the development of an AI-powered web application, delivering production-ready features across frontend and backend in an Agile environment.",
     techStack: "Python, Django, Typescript, Stripe, Auth0, Docker, Git, AWS Cloud, Tailwind",
-    awards: "Contributed to both the frontend and backend of the web application.\n Implemented Stripe integration and enhanced the application's payment processing capabilities.\n Implemented Auth0 integration to enhance authentication.\nMaintained clear API and implement documentations to ensure seamless integrations and contributed to code reviews.\nEngaged actively in Agile software development practices with 15+ feature implementations and 30+ bug fixes.\nEffectively pushing updates with 5-10 commits weekly to ensure the continuous evolution and reliability of the software solutions.",
+    awards: "Enhanced the React frontend and Django backend, delivering 15+ new features and resolving 30+ bugs.\n Implemented async tasks and API integrations to improve responsiveness and support AI processing workflows.\n Integrated Stripe and Auth0 for secure payments and authentication.\nMaintained clear documentation and contributed 5–10 commits weekly to ensure continuous delivery.",
   },
   {
     place: "Hua's Pharmaceuticals Co., Ltd.",
+    link: "http://www.hsyyao.cn/",
     tenure: "May 2024 - Aug 2024",
     role: "Backend Software Developer",
-    detail: "Involved in key projects focusing on the implementation of user management functionalities and assisted in maintaining the overall system stability and performance monitoring.",
+    detail: "Worked on backend development and system reliability for an internal IoT system supporting company operations.",
     techStack: "Java, SQL, SpringMVC, Nacos, Redis, Skywalking",
-    awards: "Designed and implemented the backend functionalities. \n Ensure stable service registration and configuration after system reboots by Nacos.\n Participated in integrating Skywalking to monitor system performance and supported service anomaly notifications. \n Updated system documentation to improve team operational efficiency and system reliability.",
+    awards: "Implemented user management features and backend logic using Java, SpringMVC, and Redis. \n Ensured service registration and configuration resilience.\n Integrated Skywalking for real-time performance monitoring and anomaly detection. \n Updated system documentation to improve operational efficiency and support team collaboration.",
   },
   {
     place: "BASF \n Coatings Technology (Shanghai) Co., Ltd.",
+    link: "https://www.basf.com/cn/en/who-we-are/organization",
     tenure: "Dec 2024 - Feb 2025",
-    role: "Digital Product Intern",
-    detail: "Responsible for testing new features, managing virtual color solutions, and supporting the production configuration of digital products. Involved in training end-users and collaborated with DevOps teams to enhance product functionality and user experience.",
+    role: "Digital Product Manager",
+    detail: "Responsible for managing virtual color solutions. Collaborated with DevOps teams to enhance product functionality and user experience.",
     techStack: "Agile methodologies, Project Management, Microsoft Power Apps",
     awards: "Conducted testing and validation of new features to enhance digital product reliability and user experience. \n Managed virtual color solutions, including system configurations and setup of scan panels and color collections, optimizing operational workflows. \n Collaborated with the DevOps team on Microsoft Power Apps to streamline production processes and application deployment. \n Assisted the Product Owner in configuring production environments for digital products, ensuring alignment with business objectives. \n Trained end-users on utilizing various modules and features of digital products, increasing user adoption and satisfaction.",
   },

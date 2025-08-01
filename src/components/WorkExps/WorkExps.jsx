@@ -38,9 +38,19 @@ const WorkExps = () => {
                                 variants={textVariant2}
                                 key={i}>
                                 <div className={css.post}>
-                                    <h1>{exp.place}</h1>
+                                    <h1>
+                                        <a
+                                        href={exp.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={css.companyLink}
+                                        >
+                                        {exp.place}
+                                        </a>
+                                    </h1>
                                     <p>{exp.tenure}</p>
                                 </div>
+
                                 <div className={css.role}>
                                     <h1>{exp.role}</h1>
                                     <p>{exp.detail}</p>

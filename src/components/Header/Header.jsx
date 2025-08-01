@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from "react";
 import css from "./Header.module.scss";
-import {BiPhoneCall, BiEnvelope, BiPhone, BiMenuAltRight} from "react-icons/bi";
+import {BiPhoneCall, BiEnvelope, BiLink, BiMenuAltRight, BiCloudDownload} from "react-icons/bi";
 import {motion} from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
@@ -92,10 +92,30 @@ const Header = () => {
                         </li>
                         <li className={css.contact}>
                             <p><BiPhoneCall size={"30px"}/> +61 0459216814</p>
-                            <p><BiPhone size={"30px"}/> +86 18192812085</p>
                             <p><BiEnvelope size={"30px"}/> 
                                 <a href="mailto:micheren1@outlook.com"> 
                                     micheren1@outlook.com 
+                                </a>
+                            </p>
+                            <p>
+                                <BiLink size={"30px"}/> 
+                                <a 
+                                    href="https://www.linkedin.com/in/yuxin-michelle-ren" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                > 
+                                    LinkedIn
+                                </a>
+                            </p>
+                            <p>
+                                <BiCloudDownload size={"30px"}/> 
+                                <a 
+                                    href="/CV.pdf" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    download="Yuxin_CV.pdf"
+                                > 
+                                    My CV
                                 </a>
                             </p>
                         </li>

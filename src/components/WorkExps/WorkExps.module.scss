@@ -35,6 +35,29 @@
                         display: inline-block !important;
                         transition: all 0.3s ease !important;
                         
+                        .companyLink {
+                            color: inherit !important; // 继承父元素颜色
+                            text-decoration: none !important;
+                            font-weight: inherit !important;
+                            display: inline-block !important;
+                            width: 100% !important;
+                            transition: all 0.3s ease !important;
+                            
+                            &:hover {
+                                color: #5d2e0d !important;
+                                text-decoration: none !important;
+                            }
+                            
+                            &:visited {
+                                color: inherit !important;
+                            }
+                            
+                            &:focus {
+                                outline: 2px solid #8b4513 !important;
+                                outline-offset: 2px !important;
+                                border-radius: 4px !important;
+                            }
+                        }
                         &:hover {
                             transform: translateY(-2px) !important;
                             box-shadow: 0 4px 12px rgba(212, 165, 116, 0.4) !important;
