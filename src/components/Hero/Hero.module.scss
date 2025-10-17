@@ -75,14 +75,18 @@
                 background-position: 39% bottom;;
             }
             img{
+                position: relative;
+                left: -2rem;
                 width: 38rem; // 默认桌面尺寸
                 height: auto;
                 margin-bottom: -5px;
                 @media (max-width: $md) {
-                width: 28rem;
+                    left: -1.5rem;
+                    width: 28rem;
                 }
                 @media (max-width: $sm) {
-                width: 18rem;
+                    left: -1rem;
+                    width: 18rem;
                 }
             }
         }

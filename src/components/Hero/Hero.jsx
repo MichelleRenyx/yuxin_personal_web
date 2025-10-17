@@ -32,7 +32,7 @@ const Hero = () => {
                 className={css.person}>
                     <motion.img 
                     variants={slideIn("up", "tween", 0.5, 1.3)}
-                    src="./yuxin.png" alt="" />
+                    src="./yuxin_2.png" alt="" />
                 </motion.div>
                 
                 
