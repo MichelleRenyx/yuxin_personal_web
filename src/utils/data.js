@@ -211,6 +211,19 @@ export const sliderSettings = {
 export const projectsData = [
   {
     id: 1,
+    title: "APR Copilot - Task Mining Platform",
+    image: "./APR_copilot.png",
+    description: "An AI-powered copilot for task mining that enabled natural language queries over employee desktop-interaction data to gain insights of task optimization and automation opportunities.",
+    technologies: ["Python", "LangGraph", "LangChain", "MCP", "LLM", "MySQL", "CI/CD", "Git"],
+    features: [
+      "Designed the end-to-end architecture and multi-agent pipeline (LangGraph/LangChain), defining module boundaries, data contracts, and orchestration.",
+      "Integrated LangSmith for accuracy monitoring and performance tracking.",
+      "Developed 2 key agents (Format Selector and General Agent), enabling optimal visualizations and insights generation, and seamlessly integrated them across the agent pipeline.",
+      "Designed and built a lightweight CI/CD pipeline with Github Action, enabling predictable releases."
+    ]
+  },
+  {
+    id: 2,
     title: "OrderDash - Food Ordering & Delivery Platform",
     image: "./OrderDash_Demo.png",
     description: "An online food ordering and delivery platform, featuring distinct Manager and User interfaces with a frontend-backend separated architecture.",
@@ -223,7 +236,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Intelligent Form File Processor",
     image: "./Intelligent Form File Processor.png",
     description: "A full-stack web platform that enables users to upload spreadsheet files and describe data processing tasks in natural language.",
@@ -236,7 +249,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Club-Event Management Web Application",
     image: "./club-event_management.png",
     description: "A web application for managing club memberships, submitting/approving reimbursement and event RSVPs.",
@@ -250,7 +263,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Shared WhiteBoard",
     image: "./shared-whiteBoard.png",
     description: "A network-based distributed shared whiteboard application, enabling multiple users to draw on a shared interactive canvas in real-time.",
