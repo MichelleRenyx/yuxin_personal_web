@@ -62,7 +62,7 @@ const Header = () => {
             <div className={css.fullWidthContainer}>
                 <div className={`innerWidth ${css.container}`}>
                     <div className={css.name}>
-                        Yuxin Ren
+                        Michelle Ren
                     </div>
 
                     <ul 

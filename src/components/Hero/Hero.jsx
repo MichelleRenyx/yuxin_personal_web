@@ -18,7 +18,7 @@ const Hero = () => {
                     <motion.span 
                     variants={fadeIn("right", "tween", 0.3, 1)}
                     className="primaryText">
-                        Hi, <br/> I'm Yuxin.
+                        Hi, <br/> I'm Michelle.
                     </motion.span>
                     <motion.span 
                     variants={fadeIn("left", "tween", 0.3, 1)} 
@@ -73,10 +73,52 @@ const Hero = () => {
                     <motion.div 
                     variants={fadeIn("left", "tween", 0.3, 1)}
                     className={css.certificate}>
-                        <img src="./certificate1.svg" alt="" />
-                        <span>Master of Software Engineering<br /><br /></span>
-
-                        <span> @ The University of Melbourne </span><br />
+                        {/* <img src="./certificate1.svg" alt="" /> */}
+                        <motion.span 
+                            className={css.certificateText}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5, duration: 0.6 }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                        >
+                            💻 Full-Stack Software Developer
+                        </motion.span>
+                        <motion.span 
+                            className={css.certificateText}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.7, duration: 0.6 }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                        >
+                            📚 Self-driven Learner
+                        </motion.span>
+                        <motion.span 
+                            className={css.certificateText}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.9, duration: 0.6 }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                        >
+                            🤝 Trustworthy Teammate
+                        </motion.span>
+                        <motion.span 
+                            className={css.certificateText}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 1.1, duration: 0.6 }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                        >
+                            🏋️ Part-time Gym Buddy
+                        </motion.span>
+                        <motion.span 
+                            className={css.certificateText}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 1.3, duration: 0.6 }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                        >
+                            🌱 Balcony Gardener
+                        </motion.span>
                     </motion.div>
                 </div>
             </motion.div>

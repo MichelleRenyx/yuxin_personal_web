@@ -46,6 +46,79 @@
                     margin-bottom: 1rem;
                     width: 3.5rem;
                 }
+
+                .certificateText {
+                    display: block;
+                    cursor: pointer;
+                    transition: all 0.1s ease;
+                    margin-bottom: 0.8rem; // 统一的较小间距
+                    
+                    // 第一行最大字体
+                    &:nth-child(1) {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        color: #2d3748;
+                        
+                        @media (max-width: $sm) {
+                            font-size: 1rem;
+                        }
+                    }
+                    
+                    // 第二行稍小
+                    &:nth-child(2) {
+                        font-size: 1.15rem;
+                        font-weight: 570;
+                        color: #4a5568;
+                        
+                        @media (max-width: $sm) {
+                            font-size: 0.95rem;
+                        }
+                    }
+                    
+                    // 第三行更小
+                    &:nth-child(3) {
+                        font-size: 1.05rem;
+                        font-weight: 550;
+                        color: #636f83;
+                        
+                        @media (max-width: $sm) {
+                            font-size: 0.9rem;
+                        }
+                    }
+                    
+                    // 第四行较小
+                    &:nth-child(4) {
+                        font-size: 0.95rem;
+                        font-weight: 510;
+                        color: #838e9d;
+                        
+                        @media (max-width: $sm) {
+                            font-size: 0.85rem;
+                        }
+                    }
+                    
+                    // 第五行最小
+                    &:nth-child(5) {
+                        font-size: 0.9rem;
+                        font-weight: 480;
+                        color: #949ca6;
+                        margin-bottom: 0; // 最后一行不需要下边距
+                        
+                        @media (max-width: $sm) {
+                            font-size: 0.8rem;
+                        }
+                    }
+                    
+                    // 响应式间距调整
+                    @media (max-width: $sm) {
+                        margin-bottom: 0.6rem;
+                    }
+                    
+                    &:hover {
+                        transform: translateX(8px);
+                        filter: brightness(1.5);
+                    }
+                }
             }
         }
         .person{
@@ -76,8 +149,8 @@
             }
             img{
                 position: relative;
-                left: -2rem;
-                width: 38rem; // 默认桌面尺寸
+                left: -6rem;
+                width: 46rem; // 默认桌面尺寸
                 height: auto;
                 margin-bottom: -5px;
                 @media (max-width: $md) {
