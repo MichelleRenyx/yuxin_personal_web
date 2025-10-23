@@ -149,8 +149,8 @@
             }
             img{
                 position: relative;
-                left: -6rem;
-                width: 46rem; // 默认桌面尺寸
+                left: -4rem;
+                width: 40rem; // 默认桌面尺寸
                 height: auto;
                 margin-bottom: -5px;
                 @media (max-width: $md) {
