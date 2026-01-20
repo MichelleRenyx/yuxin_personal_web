@@ -132,34 +132,50 @@
                 background-position: bottom;
             }
             position: absolute;
-            bottom: -2.5rem;
+            bottom: -3rem; // 调整更往下（负值越大越往下）
             margin: auto;
             background-image: url('../splash.png');
             background-repeat: no-repeat;
-            background-size: 30rem;
-            left: 28%;
+            background-size: 25rem; // 背景尺寸
+            background-position: 12rem 85%; // 背景图向右偏移10rem，向下85%
+            left: 18%; //图片位置
+            bottom: -3rem;
+            transform: translateX(-50%);
+            // 增加容器最小宽度和右侧padding以容纳向右移动的背景图，防止右侧被裁剪
+            min-width: 45rem;
+            padding-right: 15rem; // 增加右侧空间以显示完整的背景图
+            overflow: visible; // 确保背景图不会被容器裁剪
             @media (max-width: $md) {
-                background-size: 20rem;
-                background-position: center bottom;
+                background-size: 15rem; // 从18rem进一步减小
+                background-position: 10rem 90%; // 背景图往右往下
+                min-width: 32rem; // 中等屏幕的容器最小宽度
+                left: -10%;
+                padding-right: 12rem; // 中等屏幕的右侧padding
             }
 
             @media (max-width: $sm) {
-                background-size: 10rem;
-                background-position: 39% bottom;;
+                background-size: 12rem; // 保持10rem
+                background-position: 8rem 110%; // 背景图向右移动（从6rem调整为7.5rem）
+                min-width: 20rem; // 小屏幕的容器最小宽度
+                padding-right: 8rem; // 小屏幕的右侧padding
+                overflow: visible; // 确保背景图不会被裁剪
             }
             img{
                 position: relative;
-                left: -4rem;
-                width: 40rem; // 默认桌面尺寸
+                left: 50%;
+                transform: translateX(-50%);
+                width: 24rem; // 进一步减小尺寸（从30rem减小到24rem）
                 height: auto;
                 margin-bottom: -5px;
                 @media (max-width: $md) {
-                    left: -1.5rem;
-                    width: 28rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 18rem; // 从22rem减小到18rem
                 }
                 @media (max-width: $sm) {
-                    left: -1rem;
-                    width: 18rem;
+                    left: 48%; // 从50%调整为48%，让图片向左移动一点点
+                    transform: translateX(-50%);
+                    width: 12rem; // 从14rem减小到12rem
                 }
             }
         }
