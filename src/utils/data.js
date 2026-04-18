@@ -34,8 +34,7 @@ export const projectExperience = [
 
 export const WhatDoIHelp = [
   "I am a results-oriented and innovative Software Engineer specializing in Full-Stack Software Development, with a solid foundation in various commonly used development technologies.",
-  "Proficient in Python, Java, Swift, JavaScript, TypeScript and RESTful APIs, with extensive experience in CI/CD, DevOps and Cloud technologies (AWS). Demonstrated expertise in working within Agile development environment, focusing on delivering practical, production-ready projects on time.",
-  "I approach challenges with adaptability, effective communication, demonstrating strong problem-solving skills and a collaborative mindset that enables me to thrive in dynamic environments.",
+  "Proficient in Python, Java, Javascript, Typescript, Database and APIs, with extensive experience in AI integration frameworks, Cloud Technologies and version control. Demonstrated expertise in working within Agile development environment, focusing on delivering practical, production-ready projects on time.",
 ];
 
 export const boldWords = ["•", "Python", "JavaScript", "Swift", "Java", "TypeScript", "Spring Boot", "RESTful APIs", "DevOps", "Micro-Service","CI/CD", "Cloud", "AWS", "Agile", "production-ready", "problem-solving", "collaborative", "web application development"];
@@ -64,9 +63,17 @@ export const workExp = [
     link: "https://www.linkedin.com/company/senstride/",
     tenure: "Jul 2025 - Now",
     role: "Software Engineer",
-    detail: "Designed and developed a cross-platform gait assessment system, including an iOS mobile app and a clinician-facing web dashboard, to support elderly fall prevention.",
-    techStack: "Swift, SwiftUI, Python, AWS, JavaScript, Git, Figma",
-    awards: "Built the iOS app using Swift and MVVM architecture, and created 10+ responsive views with iterative UI/UX design in Figma.\n Developed a web dashboard for clinicians to manage patients, assessments, and gait metrics. \n Integrated AWS (RDS) to ensure secure, scalable data storage compliant with medical workflows.\n Collaborate with stakeholders across teams to deliver production-ready features and improve user experience.",
+    detail: "Designed and delivered end-to-end software products within a gait analysis platform to support fall-risk reduction for older adults and people living with Parkinson’s disease.",
+    techStack: "Python, AWS, JavaScript, Git, Figma",
+    awards: "Led 0→1 full-stack development of a data dashboard, delivering data visualizations and end-to-end user workflows.\n Designed core data models and database schema, ensuring scalability and query performance. \n Delivered end-to-end AWS deployment and CD processes, including cloud security hardening and encryption.\n Drove performance improvements, reducing dashboard loading time by 60%-80%. \n Shipped 3-4 tickets per week in an iterative delivery cycle.",
+  },
+  {
+    place: "University of Melbourne",
+    tenure: "Jan 2026 - Now",
+    role: "Software Engineer",
+    detail: "Built a full-stack learning platform for University of Melbourne teaching staff to improve teaching quality, enabling students to practise from a curated question bank and receive personalised recommendations based on attempt history.",
+    techStack: "LLM, Spring Boot, Python, AWS, JavaScript, Git, Figma, Docker",
+    awards: "Developed GenAI-assisted workflows to generate related questions from existing items to expand the question bank, with guardrails for relevance and instructional alignment. \n Delivered student practice reports (progress, weak areas, trends) and cohort-level analytics for tutors/lecturers to understand mastery across topics and identify intervention opportunities. \n Implemented a reliable event-driven backend with Spring Boot, using transactional outbox + RabbitMQ for asynchronous logging,feedback capture, and analytics updates \n Managed PostgreSQL schema evolution with Flyway and reproducible local infra via Docker Compose."
   },
   {
     place: "Rhombus AI",
@@ -213,13 +220,14 @@ export const projectsData = [
     id: 1,
     title: "APR Copilot - Task Mining Platform",
     image: "./APR_copilot.png",
-    description: "An AI-powered copilot for task mining that enabled natural language queries over employee desktop-interaction data to gain insights of task optimization and automation opportunities.",
+    description: "An GenAI powered copilot for task mining that enabled natural language queries over employee desktop-interaction data to gain insights of task optimization and automation opportunities.",
     technologies: ["Python", "LangGraph", "LangChain", "MCP", "LLM", "MySQL", "CI/CD", "Git"],
     features: [
-      "Designed the end-to-end architecture and multi-agent pipeline (LangGraph/LangChain), defining module boundaries, data contracts, and orchestration.",
+      "Designed the LangGraph architecture and multi-agent pipeline, defining module boundaries, data contracts, and orchestration.",
       "Integrated LangSmith for accuracy monitoring and performance tracking.",
-      "Developed 2 key agents (Format Selector and General Agent), enabling optimal visualizations and insights generation, and seamlessly integrated them across the agent pipeline.",
-      "Designed and built a lightweight CI/CD pipeline with Github Action, enabling predictable releases."
+      "Developed and integrated 2 key agents across the agent pipeline, enabling data visualization and insight generation.",
+      "Designed and built the CI/CD pipeline with Github Action, enabling predictable releases.",
+      "The project was recognized with the Unimelb Capstone Merit Award for it’s outstanding achievement and will be used in Apromore’s real-world products tracking."
     ]
   },
   {

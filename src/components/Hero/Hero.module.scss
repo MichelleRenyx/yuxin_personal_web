@@ -125,25 +125,25 @@
             @media (max-width: $sm), (max-width: $md){
                 position: relative;
                 left: 0;
-                background-size: 20rem;
+                background-size: 30rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 background-position: bottom;
             }
             position: absolute;
-            bottom: -3rem; // 调整更往下（负值越大越往下）
+            bottom: 5rem; // 调整更往下（负值越大越往下）
             margin: auto;
             background-image: url('../splash.png');
             background-repeat: no-repeat;
-            background-size: 25rem; // 背景尺寸
-            background-position: 12rem 85%; // 背景图向右偏移10rem，向下85%
+            background-size: 30rem; // 背景尺寸
+            background-position: 10rem 75%; // 背景图向右偏移10rem，向下85%
             left: 18%; //图片位置
             bottom: -3rem;
             transform: translateX(-50%);
             // 增加容器最小宽度和右侧padding以容纳向右移动的背景图，防止右侧被裁剪
             min-width: 45rem;
-            padding-right: 15rem; // 增加右侧空间以显示完整的背景图
+            padding-right: 18rem; // 增加右侧空间以显示完整的背景图
             overflow: visible; // 确保背景图不会被容器裁剪
             @media (max-width: $md) {
                 background-size: 15rem; // 从18rem进一步减小
@@ -162,9 +162,9 @@
             }
             img{
                 position: relative;
-                left: 50%;
+                left: 15%;
                 transform: translateX(-50%);
-                width: 24rem; // 进一步减小尺寸（从30rem减小到24rem）
+                width: 40rem; // 进一步减小尺寸（从30rem减小到24rem）
                 height: auto;
                 margin-bottom: -5px;
                 @media (max-width: $md) {
