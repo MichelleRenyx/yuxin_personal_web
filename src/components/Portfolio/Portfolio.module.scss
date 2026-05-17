@@ -1,4 +1,4 @@
-@import '../../styles/contants.scss';
+@import '../../styles/constants.scss';
 
 .wrapper{ 
     .container{
@@ -46,7 +46,7 @@
     }
 }
 
-// 弹窗样式 - 现在通过Portal渲染到body，不会被任何组件遮挡
+// modal style - now rendered to body through Portal, not blocked by any component
 .modalOverlay {
     position: fixed;
     top: 0;

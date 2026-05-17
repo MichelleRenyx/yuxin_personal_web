@@ -1,4 +1,4 @@
-@import '../../styles/contants.scss';
+@import '../../styles/constants.scss';
 
 .wrapper{
     .container{
@@ -9,7 +9,7 @@
             p{
                 line-height: 30px;
                 
-                // 移动端优化
+                // mobile optimization
                 @media (max-width: $md) {
                     padding: 0 1rem;
                     text-align: center;
@@ -18,7 +18,7 @@
         }
         
         .comments{
-            // 移动端整体布局调整
+            // mobile overall layout adjustment
             @media (max-width: $md) {
                 padding: 0;
                 margin: 0;
@@ -31,7 +31,7 @@
                     padding: 70px 20px;
                     overflow-y: visible;
                     
-                    // 移动端padding调整
+                    // mobile padding adjustment
                     @media (max-width: $md) {
                         padding: 70px 10px 20px 10px;
                         margin: 0;
@@ -40,7 +40,7 @@
                     & .slick-slide>div{
                         padding: 0 30px;
                         
-                        // 移动端减少左右padding
+                        // mobile reduce left and right padding
                         @media (max-width: $md) {
                             padding: 0 10px;
                         }
@@ -55,7 +55,7 @@
                     }
                 }
                 
-                // 自定义箭头样式
+                // custom arrow style
                 .slick-prev, .slick-next {
                     color: rgb(236, 166, 80);
                     z-index: 1;
@@ -64,13 +64,13 @@
                         color: rgb(236, 166, 80);
                         font-size: 40px;
                         
-                        // 移动端箭头调整
+                        // mobile arrow adjustment
                         @media (max-width: $md) {
                             font-size: 30px;
                         }
                     }
                     
-                    // 移动端箭头位置调整
+                    // mobile arrow position adjustment
                     @media (max-width: $md) {
                         &.slick-prev {
                             left: -5px;
@@ -93,9 +93,9 @@
                 position: relative;
                 margin: 0 auto;
                 max-width: 100%;
-                transition: all 0.3s ease; // 为整个卡片添加平滑过渡
+                transition: all 0.3s ease; // add smooth transition to the entire card
                 
-                // 移动端优化
+                // mobile optimization
                 @media (max-width: $md) {
                     padding: 2.5rem 1rem 1.5rem 1rem;
                     margin: 0;
@@ -120,7 +120,7 @@
                     transform: translateX(-50%);
                     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.08));
                     
-                    // 移动端头像调整
+                    // mobile avatar adjustment
                     @media (max-width: $md) {
                         width: 3rem;
                         height: 3rem;
@@ -130,7 +130,7 @@
 
                 .contentWrapper {
                     width: 100%;
-                    // 高度和overflow由JS控制
+                    // height and overflow controlled by JS
                 }
 
                 p{
@@ -141,7 +141,7 @@
                     word-wrap: break-word;
                     word-break: break-word;
                     
-                    // 移动端文字调整
+                    // mobile text adjustment
                     @media (max-width: $md) {
                         font-size: 0.85rem;
                         line-height: 22px;

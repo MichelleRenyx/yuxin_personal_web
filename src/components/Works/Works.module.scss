@@ -1,4 +1,4 @@
-@import '../../styles/contants.scss';
+@import '../../styles/constants.scss';
 
 .wrapper{
     background: white;
@@ -87,23 +87,23 @@
     }
 }
 
-/* 移动端响应式设计 */
+/* mobile responsive design */
 @media (max-width: 768px) {
     .wrapper {
-        padding: 2rem 1rem; /* 减少内边距 */
+        padding: 2rem 1rem; /* reduce padding */
         
         .container {
             gap: 1.5rem;
             
             .experience {
-                gap: 2rem; /* 增加经验项之间的间距 */
+                gap: 2rem; /* increase spacing between experience items */
                 
                 .exp {
-                    flex-direction: column; /* 改为垂直布局 */
+                    flex-direction: column; /* change to vertical layout */
                     align-items: flex-start;
-                    gap: 0.5rem; /* 减少间距 */
+                    gap: 0.5rem; /* reduce spacing */
                     position: relative;
-                    padding-left: 2rem; /* 为进度条留出空间 */
+                    padding-left: 2rem; /* leave space for progress bar */
                     min-height: 150px; /* 确保有足够高度 */
                     
                     .post {
@@ -118,7 +118,7 @@
                             color: #8b4513 !important;
                             box-shadow: 0 2px 6px rgba(212, 165, 116, 0.25) !important;
                             display: inline-block !important;
-                            font-size: 1.1rem !important; /* 调整标题大小 */
+                            font-size: 1.1rem !important; /* adjust title size */
                         }
                         
                         p {
@@ -129,7 +129,7 @@
                     }
                     
                     .role {
-                        margin-left: 0; /* 移除左边距 */
+                        margin-left: 0; /* remove left margin */
                         width: 100%;
                         
                         h1 {
@@ -146,12 +146,12 @@
                 }
                 
                 .progressBar {
-                    left: 0; /* 移到左边 */
+                    left: 0; /* move to left */
                     width: 2px;
                     
                     .line {
                         left: 0;
-                        background-size: 2px 20px; /* 调整虚线间距 */
+                        background-size: 2px 20px; /* adjust dashed line spacing */
                     }
                     
                     > div {
@@ -160,7 +160,7 @@
                         .circle {
                             width: 0.8rem;
                             height: 0.8rem;
-                            margin-left: -0.3rem; /* 居中对齐 */
+                            margin-left: -0.3rem; /* center align */
                         }
                     }
                 }
@@ -169,7 +169,7 @@
     }
 }
 
-/* 小屏幕手机 */
+/* small screen phone */
 @media (max-width: 480px) {
     .wrapper {
         padding: 1.5rem 0.5rem;
@@ -179,7 +179,7 @@
                 .exp {
                     padding-left: 1.5rem;
                     min-height: 120px;
-                    gap: 0.3rem; /* 进一步减少小屏幕间距 */
+                    gap: 0.3rem; /* further reduce spacing for small screen */
                     
                     .post {
                         h1 {

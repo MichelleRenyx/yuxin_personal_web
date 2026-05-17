@@ -9,7 +9,7 @@ const People = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [expandedItems, setExpandedItems] = useState(new Set());
 
-    // 检测是否为移动设备
+    // check if it is a mobile device
     useEffect(() => {
         const checkScreenSize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -23,7 +23,7 @@ const People = () => {
         };
     }, []);
 
-    // 为移动端优化的slider设置
+    // optimized slider settings for mobile
     const mobileSliderSettings = {
         ...sliderSettings,
         arrows: true,
@@ -34,7 +34,7 @@ const People = () => {
         slidesToScroll: 1,
         infinite: true,
         autoplay: false,
-        // 滑动前的回调 - 收起所有展开的项目
+        // callback before sliding - collapse all expanded items
         beforeChange: () => {
             if (isMobile) {
                 setExpandedItems(new Set());
@@ -48,7 +48,7 @@ const People = () => {
             if (newExpandedItems.has(index)) {
                 newExpandedItems.delete(index);
             } else {
-                newExpandedItems.clear(); // 只允许一个展开
+                newExpandedItems.clear(); // only allow one expanded
                 newExpandedItems.add(index);
             }
             setExpandedItems(newExpandedItems);
@@ -120,7 +120,7 @@ const People = () => {
                                             }}
                                             transition={{
                                                 duration: 0.6,
-                                                ease: [0.25, 0.1, 0.25, 1] // 自定义贝塞尔曲线：开始慢、中间快、结束慢
+                                                ease: [0.25, 0.1, 0.25, 1] // custom bezier curve: start slow, middle fast, end slow
                                             }}
                                             style={{
                                                 overflow: 'hidden'
@@ -133,7 +133,7 @@ const People = () => {
                                                 }}
                                                 transition={{
                                                     duration: 0.4,
-                                                    delay: isExpanded ? 0.2 : 0.2, // 展开时延迟显示，收起时立即隐藏
+                                                    delay: isExpanded ? 0.2 : 0.2, // delay display when expanded, hide immediately when collapsed
                                                     ease: "easeOut"
                                                 }}
                                             >
@@ -149,7 +149,7 @@ const People = () => {
                                                             }}
                                                             transition={{
                                                                 duration: 0.4,
-                                                                delay: 0.3 + index * 0.05, // 逐段出现
+                                                                delay: 0.3 + index * 0.05, // appear gradually
                                                                 ease: "easeOut"
                                                             }}
                                                         >

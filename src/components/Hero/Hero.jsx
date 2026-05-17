@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import css from "./Hero.module.scss";
 import {motion} from "framer-motion";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 
 const Hero = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        const onResize = () => setIsDesktop(window.innerWidth > 768);
+        onResize();
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, []);
+
+    const CERTIFICATES = [
+        { text: '💻 Full-Stack Software Developer', delay: 0.5 },
+        { text: '📚 Self-driven Learner', delay: 0.7 },
+        { text: '🤝 Trustworthy Teammate', delay: 0.9 },
+        { text: '🏋️ Part-time Gym Buddy', delay: 1.1 },
+        { text: '🌱 Balcony Gardener', delay: 1.3 },
+    ];
+
     return (
         <section className={`paddings ${css.wrapper}`}>
             <motion.div 
@@ -27,13 +44,13 @@ const Hero = () => {
                     </motion.span>
                 </div>
 
-                <motion.div 
-                variants={fadeIn("up", "tween", 0.3, 1)}
-                className={css.person}>
-                    <motion.img 
-                    variants={slideIn("up", "tween", 0.5, 1)}
-                    src="./yuxin_2.png" alt="" />
-                </motion.div>
+                    <motion.div 
+                        variants={fadeIn("up", "tween", 0.3, 1)}
+                        className={css.person}>
+                        <motion.img 
+                            variants={slideIn("up", "tween", 0.5, 1)}
+                            src="./yuxin_2.png" alt="Yuxin Michelle Ren" />
+                    </motion.div>
                 
                 
 
@@ -63,7 +80,7 @@ const Hero = () => {
                                     href="/CV.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    {...(window.innerWidth > 768 ? { download: "Yuxin_CV.pdf" } : {})}
+                                    {...(isDesktop ? { download: "Yuxin_CV.pdf" } : {})}
                                 >
                                     My CV
                                 </a>
@@ -73,52 +90,18 @@ const Hero = () => {
                     <motion.div 
                     variants={fadeIn("left", "tween", 0.3, 1)}
                     className={css.certificate}>
-                        {/* <img src="./certificate1.svg" alt="" /> */}
-                        <motion.span 
-                            className={css.certificateText}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5, duration: 0.6 }}
-                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                        >
-                            💻 Full-Stack Software Developer
-                        </motion.span>
-                        <motion.span 
-                            className={css.certificateText}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.7, duration: 0.6 }}
-                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                        >
-                            📚 Self-driven Learner
-                        </motion.span>
-                        <motion.span 
-                            className={css.certificateText}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.9, duration: 0.6 }}
-                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                        >
-                            🤝 Trustworthy Teammate
-                        </motion.span>
-                        <motion.span 
-                            className={css.certificateText}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 1.1, duration: 0.6 }}
-                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                        >
-                            🏋️ Part-time Gym Buddy
-                        </motion.span>
-                        <motion.span 
-                            className={css.certificateText}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 1.3, duration: 0.6 }}
-                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                        >
-                            🌱 Balcony Gardener
-                        </motion.span>
+                        {CERTIFICATES.map(({text, delay}, idx) => (
+                            <motion.span
+                                key={idx}
+                                className={css.certificateText}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay, duration: 0.6 }}
+                                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                            >
+                                {text}
+                            </motion.span>
+                        ))}
                     </motion.div>
                 </div>
             </motion.div>

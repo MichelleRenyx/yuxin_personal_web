@@ -64,16 +64,16 @@ export const workExp = [
     tenure: "Jul 2025 - Now",
     role: "Software Engineer",
     detail: "Designed and delivered end-to-end software products within a gait analysis platform to support fall-risk reduction for older adults and people living with Parkinson’s disease.",
-    techStack: "Python, AWS, JavaScript, Git, Figma",
-    awards: "Led 0→1 full-stack development of a data dashboard, delivering data visualizations and end-to-end user workflows.\n Designed core data models and database schema, ensuring scalability and query performance. \n Delivered end-to-end AWS deployment and CD processes, including cloud security hardening and encryption.\n Drove performance improvements, reducing dashboard loading time by 60%-80%. \n Shipped 3-4 tickets per week in an iterative delivery cycle.",
+    techStack: "Healthcare, Data Dashboard, Python, SQL, AWS, JavaScript, Figma, Lambda",
+    awards: "Led 0→1 full-stack development of a data dashboard, delivering data visualizations and end-to-end user workflows.\n Designed core data models and database schema, ensuring scalability and query performance. \n Built a backend data access & transformation layer to optimized export queries for large dataset workloads. \n Built a context-aware alert explanation layer that retrieves structured data to generate actionable insights, reducing manual investigation effort.\n Delivered end-to-end AWS deployment and CD processes, including cloud security hardening and encryption.\n Drove performance improvements, reducing dashboard loading time by 60%-80%. \n Shipped 3-4 tickets per week in an iterative delivery cycle.",
   },
   {
     place: "University of Melbourne",
     tenure: "Jan 2026 - Now",
     role: "Software Engineer",
     detail: "Built a full-stack learning platform for University of Melbourne teaching staff to improve teaching quality, enabling students to practise from a curated question bank and receive personalised recommendations based on attempt history.",
-    techStack: "LLM, Spring Boot, Python, AWS, JavaScript, Git, Figma, Docker",
-    awards: "Developed GenAI-assisted workflows to generate related questions from existing items to expand the question bank, with guardrails for relevance and instructional alignment. \n Delivered student practice reports (progress, weak areas, trends) and cohort-level analytics for tutors/lecturers to understand mastery across topics and identify intervention opportunities. \n Implemented a reliable event-driven backend with Spring Boot, using transactional outbox + RabbitMQ for asynchronous logging,feedback capture, and analytics updates \n Managed PostgreSQL schema evolution with Flyway and reproducible local infra via Docker Compose."
+    techStack: "AI Agent, Spring Boot, Java, ECS, JavaScript, Git, Figma, Docker",
+    awards: "Designed GenAI-assisted content generation workflows with retrieval-based logic to expand question banks while maintaining relevance and instructional alignment. \n Delivered student practice analytics (progress, weak areas, trends) and cohort-level insights to support targeted intervention. \nImplemented an event-driven backend (Spring Boot) using transactional outbox and RabbitMQ for reliable async processing and analytics updates. \nContainerised and deployed backend services on AWS ECS (Fargate) with ALB, ensuring scalable and reliable production workloads. \n Managed PostgreSQL schema evolution with Flyway and reproducible local infrastructure via Docker Compose."
   },
   {
     place: "Rhombus AI",

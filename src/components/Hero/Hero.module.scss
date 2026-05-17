@@ -1,4 +1,4 @@
-@import '../../styles/contants.scss';
+@import '../../styles/constants.scss';
 
 .wrapper {
     overflow: hidden;
@@ -7,11 +7,20 @@
         position: relative;
         z-index: 1;
 
+        @media (max-width: $md) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .upperElements{
             @media (max-width: $sm){
                 justify-content: center;
                 text-align: center;
                 gap: 2rem;
+            }
+            @media (max-width: $md) {
+                width: 100%;
             }
             display: flex;
             align-items: center;
@@ -20,8 +29,12 @@
         }
 
         .lowerElements{
-            @media (max-width: $sm), (max-width: $md){
-                margin-top: 4rem;
+            @media (max-width: $md){
+                margin-top: 2rem;
+                gap: 2rem;
+                justify-content: center;
+            }
+            @media (max-width: $sm){
                 gap: 2rem;
                 justify-content: center;
             }
@@ -51,9 +64,9 @@
                     display: block;
                     cursor: pointer;
                     transition: all 0.1s ease;
-                    margin-bottom: 0.8rem; // 统一的较小间距
+                    margin-bottom: 0.8rem; // uniform smaller spacing
                     
-                    // 第一行最大字体
+                    // first row with maximum font size
                     &:nth-child(1) {
                         font-size: 1.25rem;
                         font-weight: 600;
@@ -64,7 +77,7 @@
                         }
                     }
                     
-                    // 第二行稍小
+                    // second row with slightly smaller font size
                     &:nth-child(2) {
                         font-size: 1.15rem;
                         font-weight: 570;
@@ -75,7 +88,7 @@
                         }
                     }
                     
-                    // 第三行更小
+                    // third row with smaller font size
                     &:nth-child(3) {
                         font-size: 1.05rem;
                         font-weight: 550;
@@ -86,7 +99,7 @@
                         }
                     }
                     
-                    // 第四行较小
+                    // fourth row with smaller font size
                     &:nth-child(4) {
                         font-size: 0.95rem;
                         font-weight: 510;
@@ -97,19 +110,19 @@
                         }
                     }
                     
-                    // 第五行最小
+                    // fifth row with smallest font size
                     &:nth-child(5) {
                         font-size: 0.9rem;
                         font-weight: 480;
                         color: #949ca6;
-                        margin-bottom: 0; // 最后一行不需要下边距
+                        margin-bottom: 0; // last row does not need bottom margin
                         
                         @media (max-width: $sm) {
                             font-size: 0.8rem;
                         }
                     }
                     
-                    // 响应式间距调整
+                    // responsive spacing adjustment
                     @media (max-width: $sm) {
                         margin-bottom: 0.6rem;
                     }
@@ -122,61 +135,38 @@
             }
         }
         .person{
-            @media (max-width: $sm), (max-width: $md){
-                position: relative;
-                left: 0;
-                background-size: 30rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-position: bottom;
-            }
+            --hero-size: clamp(16rem, 40vw, 36rem);
             position: absolute;
-            bottom: 5rem; // 调整更往下（负值越大越往下）
-            margin: auto;
+            bottom: calc(-1 * var(--hero-size) * 0.5);
+            left: 0;
+            right: 0;
+            width: var(--hero-size);
+            aspect-ratio: 1 / 1.1;
+            margin: 0 auto;
             background-image: url('../splash.png');
             background-repeat: no-repeat;
-            background-size: 30rem; // 背景尺寸
-            background-position: 10rem 75%; // 背景图向右偏移10rem，向下85%
-            left: 18%; //图片位置
-            bottom: -3rem;
-            transform: translateX(-50%);
-            // 增加容器最小宽度和右侧padding以容纳向右移动的背景图，防止右侧被裁剪
-            min-width: 45rem;
-            padding-right: 18rem; // 增加右侧空间以显示完整的背景图
-            overflow: visible; // 确保背景图不会被容器裁剪
+            background-size: 100%;
+            background-position: center;
+
             @media (max-width: $md) {
-                background-size: 15rem; // 从18rem进一步减小
-                background-position: 10rem 90%; // 背景图往右往下
-                min-width: 32rem; // 中等屏幕的容器最小宽度
-                left: -10%;
-                padding-right: 12rem; // 中等屏幕的右侧padding
+                --hero-size: clamp(13rem, 62vw, 20rem);
+                --splash-scale: 0.82;
+                position: relative;
+                bottom: auto;
+                margin: 1.5rem auto 0;
+                aspect-ratio: auto;
+                height: auto;
+                background-size: calc(100% * var(--splash-scale)) auto;
+                background-position: center bottom;
             }
 
-            @media (max-width: $sm) {
-                background-size: 12rem; // 保持10rem
-                background-position: 8rem 110%; // 背景图向右移动（从6rem调整为7.5rem）
-                min-width: 20rem; // 小屏幕的容器最小宽度
-                padding-right: 8rem; // 小屏幕的右侧padding
-                overflow: visible; // 确保背景图不会被裁剪
-            }
             img{
-                position: relative;
-                left: 15%;
-                transform: translateX(-50%);
-                width: 40rem; // 进一步减小尺寸（从30rem减小到24rem）
+                display: block;
+                width: 100%;
                 height: auto;
-                margin-bottom: -5px;
-                @media (max-width: $md) {
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 18rem; // 从22rem减小到18rem
-                }
-                @media (max-width: $sm) {
-                    left: 48%; // 从50%调整为48%，让图片向左移动一点点
-                    transform: translateX(-50%);
-                    width: 12rem; // 从14rem减小到12rem
-                }
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
             }
         }
         .buttonGroup {

@@ -1,4 +1,4 @@
-@import '../../styles/contants.scss';
+@import '../../styles/constants.scss';
 
 .wrapper{
    position: sticky;
@@ -13,10 +13,10 @@
 
    .fullWidthContainer {
        width: 100%;
-       padding: 1rem 2rem; // 添加适当的内边距
+       padding: 1rem 2rem; // add appropriate padding
        
        @media (min-width: $xxl) {
-           padding: 1rem calc((100vw - 1280px) / 2); // 在大屏幕上居中但保持满宽
+           padding: 1rem calc((100vw - 1280px) / 2); // in the large screen, center but keep full width
        }
    }
 
@@ -28,7 +28,7 @@
        flex-wrap: wrap;
        font-weight: 500;
        
-       // 确保容器占满可用宽度
+       // ensure the container takes up the full available width
        width: 100%;
        margin: 0;
        padding: 0;
@@ -40,7 +40,7 @@
        }
 
        .menu{
-           // 默认桌面端样式
+           // default desktop style
            text-transform: none;
            font-size: 1rem;
            list-style: none;
@@ -51,7 +51,7 @@
            align-items: center;
            flex-shrink: 0;
 
-           // 平板及以下设备的移动端菜单样式
+           // mobile menu style for tablet and below
            @media screen and (max-width: $md) {
                position: absolute;
                list-style: none;
@@ -72,7 +72,7 @@
                box-shadow: 0px 4px 4px rgba(0,0,0,0.05);
                z-index: 100;
                
-               // 默认隐藏状态
+               // default hidden state
                transform: translateX(100%);
                opacity: 0;
                visibility: hidden;
@@ -136,7 +136,7 @@
                }
            }
 
-           // 菜单显示状态的样式（通过JS控制）
+           // menu display state style (controlled by JS)
            &.menuOpen{
                @media screen and (max-width: $md) {
                    transform: translateX(0);
@@ -159,7 +159,7 @@
                display: block;
            }
 
-           // 大屏幕上确保隐藏
+           // ensure hidden on large screens
            @media screen and (min-width: #{$md + 1px}) {
                display: none !important;
            }

@@ -15,7 +15,7 @@ const Portfolio = () => {
     };
 
     const handleProjectClick = (project) => {
-        // 先滚动到 Portfolio 部分
+        // scroll to Portfolio section first
         const portfolioElement = document.getElementById('portfolio');
         if (portfolioElement) {
             portfolioElement.scrollIntoView({ 
@@ -24,7 +24,7 @@ const Portfolio = () => {
             });
         }
         
-        // 稍微延迟显示弹窗
+        // slightly delay display of the modal
         setTimeout(() => {
             setSelectedProject(project);
         }, 100);
@@ -34,7 +34,7 @@ const Portfolio = () => {
         setSelectedProject(null);
     };
 
-    // 滚动监听，自动关闭弹窗
+    // scroll listener, automatically close the modal
     useEffect(() => {
         const handleScroll = () => {
             if (selectedProject) {
@@ -44,7 +44,7 @@ const Portfolio = () => {
 
         if (selectedProject) {
             window.addEventListener('scroll', handleScroll);
-            // 阻止背景滚动
+            // prevent background scrolling
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'unset';
@@ -101,7 +101,7 @@ const Portfolio = () => {
                 </div>
             </motion.section>
 
-            {/* 使用Portal将弹窗渲染到body */}
+            {/* use Portal to render the modal to body */}
             {selectedProject && createPortal(
                 <AnimatePresence>
                     <motion.div
@@ -120,7 +120,7 @@ const Portfolio = () => {
                             transition={{ duration: 0.25, ease: "easeOut" }}
                             onClick={(e) => e.stopPropagation()}
                         >
-                            {/* 头部 */}
+                            {/* header */}
                             <div className={css.modalHeader}>
                                 <div className={css.modalTitle}>
                                     <h2>{selectedProject.title}</h2>
@@ -131,7 +131,7 @@ const Portfolio = () => {
                             </div>
 
                             <div className={css.modalBody}>
-                                {/* 左侧：项目图片和概览 */}
+                                {/* left: project image and overview */}
                                 <div className={css.modalLeft}>
                                     <div className={css.modalImage}>
                                         <img src={selectedProject.image} alt={selectedProject.title} />
@@ -142,7 +142,7 @@ const Portfolio = () => {
                                     </div>
                                 </div>
 
-                                {/* 右侧：技术栈和功能 */}
+                                {/* right: tech stacks and features */}
                                 <div className={css.modalRight}>
                                     <div className={css.technologiesSection}>
                                         <h3>Tech Stacks</h3>
@@ -170,7 +170,7 @@ const Portfolio = () => {
                         </motion.div>
                     </motion.div>
                 </AnimatePresence>,
-                document.body // 直接渲染到body
+                document.body // render directly to body
             )}
         </>
     )

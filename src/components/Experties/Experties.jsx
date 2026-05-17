@@ -66,11 +66,11 @@ const Experties = () => {
                     <div className={`flexCenter ${css.stats}`}>
                         {/* <div className={`flexCenter ${css.stat}`}>
                             <span className="primaryText">666+</span>
-                            <span className="secondaryText">第一个量化</span>
+                            <span className="secondaryText">First Quantitative</span>
                         </div>
                         <div className={`flexCenter ${css.stat}`}>
                             <span className="primaryText">888+</span>
-                            <span className="secondaryText">第二个量化</span>
+                            <span className="secondaryText">Second Quantitative</span>
                         </div> */}
                         <div className={`flexCenter ${css.techStack}`}>
                             <img src="./java.svg" alt="java-icon" className={css.techIcon} />
